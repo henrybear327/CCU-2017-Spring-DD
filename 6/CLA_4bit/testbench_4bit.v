@@ -95,7 +95,18 @@ module Test_CLA_4bit;
 			correct_ans <= A + B + Cin;
 			counter <= counter + 1;
 			if(counter == 4)
-				if({Cout,S} != correct_ans)
+				if({Cout,S} == correct_ans)
+				begin
+					successful_count = successful_count+1;
+					$display ("Test %d ", ct);
+					$display ("//////////////////");
+					$display ("// Successful %d//",successful_count);
+					$display ("//////////////////");
+					$display ("%d + %d + %d= ?", A, B , Cin);
+					$display ("Cout = %d S = %d", Cout, S);
+					$display ();
+				end
+				else
 				begin
 					$display ();
 					$display ("Test %d ", ct);
@@ -107,17 +118,6 @@ module Test_CLA_4bit;
 					$display ("correct:");
 					$display ("     Cout = %d S=%d", correct_ans[16], correct_ans[15:0]);
 	
-					$display ();
-				end
-				else
-				begin
-					successful_count = successful_count+1;
-					$display ("Test %d ", ct);
-					$display ("//////////////////");
-					$display ("// Successful %d//",successful_count);
-					$display ("//////////////////");
-					$display ("%d + %d + %d= ?", A, B , Cin);
-					$display ("Cout = %d S = %d", Cout, S);
 					$display ();
 				end
 		end

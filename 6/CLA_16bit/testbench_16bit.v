@@ -95,8 +95,19 @@ module testbench;
 			correct_ans <= in_a + in_b + cin;
 			counter <= counter + 1;
 			if(counter == 4)
-				if({cout,s} != correct_ans)
+				if({cout,s} == correct_ans)
 				begin
+					successful_count = successful_count+1;
+					$display ("Test %d ", ct);
+					$display ("//////////////////");
+					$display ("// Successful %d//",successful_count);
+					$display ("//////////////////");
+					$display ("%d + %d + %d= ?", in_a, in_b , cin);
+					$display ("cout = %d s = %d\n", cout, s);
+					$display ();
+				end
+				else
+begin
 					$display ();
 					$display ("Test %d ", ct);
 					$display ("//////////");
@@ -106,18 +117,6 @@ module testbench;
 					$display ("your cout = %d s=%d", cout, s);
 					$display ("correct:");
 					$display ("     cout = %d s=%d", correct_ans[16], correct_ans[15:0]);
-	
-					$display ();
-				end
-				else
-				begin
-					successful_count = successful_count+1;
-					$display ("Test %d ", ct);
-					$display ("//////////////////");
-					$display ("// Successful %d//",successful_count);
-					$display ("//////////////////");
-					$display ("%d + %d + %d= ?", in_a, in_b , cin);
-					$display ("cout = %d s = %d\n", cout, s);
 					$display ();
 				end
 		end
