@@ -54,6 +54,9 @@ module cla_64bit( a, b, cin, sum, cout);
 	group_CLA_4bit carry_generator20(gP_4[15:12],gG_4[15:12] , ,gG_16[3] ,gP_16[3] , ,);
 
     // overflow bit
+    overflowBit carry_generator26(gP_16[3:0], gG_16[3:0] ,cin , cout);
+
+    // get all
     group_CLA_4bit carry_generator21(gP_16[3:0],gG_16[3:0] ,cin , , ,c16[4:0] ,);
 
 	group_CLA_4bit carry_generator22(gP_4[3:0],  gG_4[3:0] ,  c16[0] , , ,c[4:0] ,);
@@ -86,19 +89,27 @@ module group_CLA_4bit( p, g, cin, gG, gP, c, sum);
 
 endmodule
 
+module overflowBit( p, g, cin, cout);
+
+	input [3:0] p, g;
+	input cin;
+	output cout;
+
+	assign cout = g[3]|(p[3] & g[2])|(p[3] & p[2] & g[1])|(p[3] & p[2] & p[1] & g[0])|(p[3] & p[2] & p[1] & p[0] & cin);
+
+endmodule
+
 
 module pg_generator( a, b, p, g);
 
         input [3:0] a, b;
         output [3:0] p, g;
 
-        // Carry Propagate
         assign p[0] = a[0] ^ b[0] ;
         assign p[1] = a[1] ^ b[1] ;
         assign p[2] = a[2] ^ b[2] ;
         assign p[3] = a[3] ^ b[3] ;
 
-        //carry Generate
         assign g[0] = a[0] & b[0] ;
         assign g[1] = a[1] & b[1] ;
 	    assign g[2] = a[2] & b[2] ;
