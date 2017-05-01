@@ -94,7 +94,17 @@ module testbench;
 			correct_ans <= in_a + in_b + cin;
 			counter <= counter + 1;
 			if(counter == 4)
-				if({cout,sum} != correct_ans)
+				if({cout,sum} == correct_ans)
+				begin
+					$display ("  Test %d ", ct);
+					$display ("  ////////////////");
+					$display ("  // Successful //");
+					$display ("  ////////////////");
+					$display ("  %d + %d + %d = ?", in_a, in_b ,cin);
+					$display ("  cout = %d sum = %d\n", cout, sum);
+					$display ();
+				end
+				else
 				begin
 					$display ();
 					$display ("Test %d ", ct);
@@ -106,16 +116,6 @@ module testbench;
 					$display ("correct:");
 					$display ("     cout = %d sum=%d", correct_ans[64], correct_ans[63:0]);
 	
-					$display ();
-				end
-				else
-				begin
-					$display ("  Test %d ", ct);
-					$display ("  ////////////////");
-					$display ("  // Successful //");
-					$display ("  ////////////////");
-					$display ("  %d + %d + %d = ?", in_a, in_b ,cin);
-					$display ("  cout = %d sum = %d\n", cout, sum);
 					$display ();
 				end
 		end
