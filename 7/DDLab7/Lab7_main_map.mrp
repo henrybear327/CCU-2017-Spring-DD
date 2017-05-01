@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'Lab7_main'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 21 14:50:40 2017
+Mapped Date    : Mon May 01 20:14:32 2017
 
 Design Summary
 --------------
@@ -91,9 +91,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.76
 
-Peak Memory Usage:  956 MB
-Total REAL time to MAP completion:  57 secs 
-Total CPU time to MAP completion:   52 secs 
+Peak Memory Usage:  635 MB
+Total REAL time to MAP completion:  47 secs 
+Total CPU time to MAP completion:   45 secs 
 
 Table of Contents
 -----------------

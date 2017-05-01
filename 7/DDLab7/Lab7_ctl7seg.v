@@ -41,7 +41,7 @@ module ctl7seg(
 			endcase
 			
 		end
-		if(op==1)
+		else
 		begin
 			dr=1;
 			case (count[11:9])

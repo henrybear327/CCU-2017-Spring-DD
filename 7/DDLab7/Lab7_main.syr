@@ -1,4 +1,4 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -105,11 +105,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" into library work
+Analyzing Verilog file "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" into library work
 Parsing module <ctl7seg>.
-WARNING:HDLCompiler:751 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 13: Redeclaration of ansi port spctl is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 14: Redeclaration of ansi port sledctl is not allowed
-Analyzing Verilog file "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_main.v" into library work
+WARNING:HDLCompiler:751 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 13: Redeclaration of ansi port spctl is not allowed
+WARNING:HDLCompiler:751 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 14: Redeclaration of ansi port sledctl is not allowed
+Analyzing Verilog file "\\mac\home\Desktop\DDLab7\Lab7_main.v" into library work
 Parsing module <Lab7_main>.
 
 =========================================================================
@@ -119,23 +119,23 @@ Parsing module <Lab7_main>.
 Elaborating module <Lab7_main>.
 
 Elaborating module <ctl7seg>.
-WARNING:HDLCompiler:413 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 23: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 36: Result of 8-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 39: Result of 8-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v" Line 52: Result of 16-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 23: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 36: Result of 8-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 39: Result of 8-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v" Line 52: Result of 16-bit expression is truncated to fit in 5-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Lab7_main>.
-    Related source file is "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_main.v".
+    Related source file is "\\mac\home\Desktop\DDLab7\Lab7_main.v".
     Found 16-bit register for signal <result>.
     Found 2-bit register for signal <op>.
-    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_9_OUT> created at line 27.
-    Found 9-bit adder for signal <n0035[8:0]> created at line 26.
-    Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_9_OUT> created at line 28.
-    Found 16-bit 4-to-1 multiplexer for signal <rst_a[7]_wide_mux_10_OUT> created at line 25.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_9_OUT> created at line 26.
+    Found 9-bit adder for signal <n0035[8:0]> created at line 25.
+    Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_9_OUT> created at line 27.
+    Found 16-bit 4-to-1 multiplexer for signal <rst_a[7]_wide_mux_10_OUT> created at line 24.
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   2 Adder/Subtractor(s).
@@ -144,17 +144,17 @@ Synthesizing Unit <Lab7_main>.
 Unit <Lab7_main> synthesized.
 
 Synthesizing Unit <ctl7seg>.
-    Related source file is "C:\Users\Charlie\ISE_Project\DDLab7\Lab7_ctl7seg.v".
+    Related source file is "\\mac\home\Desktop\DDLab7\Lab7_ctl7seg.v".
     Found 1-bit register for signal <dr>.
     Found 5-bit register for signal <tmpin>.
     Found 7-bit register for signal <sledctl>.
     Found 8-bit register for signal <spctl>.
     Found 12-bit register for signal <count>.
     Found 12-bit adder for signal <count[11]_GND_2_o_add_1_OUT> created at line 23.
-    Found 16x8-bit Read Only RAM for signal <dr_PWR_2_o_wide_mux_42_OUT>
-    Found 16x7-bit Read Only RAM for signal <_n0102>
+    Found 16x8-bit Read Only RAM for signal <dr_PWR_2_o_wide_mux_40_OUT>
+    Found 16x7-bit Read Only RAM for signal <_n0094>
     Found 5-bit 8-to-1 multiplexer for signal <count[11]_GND_2_o_wide_mux_15_OUT> created at line 33.
-    Found 5-bit 7-to-1 multiplexer for signal <count[11]_GND_2_o_wide_mux_26_OUT> created at line 47.
+    Found 5-bit 7-to-1 multiplexer for signal <count[11]_GND_2_o_wide_mux_24_OUT> created at line 47.
     Summary:
 	inferred   2 RAM(s).
 	inferred   1 Adder/Subtractor(s).
@@ -571,7 +571,7 @@ Macro Statistics
 
 Synthesizing (advanced) Unit <ctl7seg>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
-INFO:Xst:3231 - The small RAM <Mram__n0102> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n0094> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -582,7 +582,7 @@ INFO:Xst:3231 - The small RAM <Mram__n0102> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_dr_PWR_2_o_wide_mux_42_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_dr_PWR_2_o_wide_mux_40_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -660,3 +660,275 @@ WARNING:Xst:1710 - FF/Latch <tmpin_4> (without init value) has a constant value 
 Optimizing unit <Lab7_main> ...
 
 Optimizing unit <ctl7seg> ...
+
+Optimizing unit <mod_16u_4u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Lab7_main, actual ratio is 2.
+FlipFlop result_10 has been replicated 1 time(s)
+FlipFlop result_11 has been replicated 3 time(s)
+FlipFlop result_12 has been replicated 1 time(s)
+FlipFlop result_13 has been replicated 2 time(s)
+FlipFlop result_14 has been replicated 2 time(s)
+FlipFlop result_15 has been replicated 2 time(s)
+FlipFlop result_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Lab7_main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2420
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 12
+#      LUT2                        : 63
+#      LUT3                        : 127
+#      LUT4                        : 158
+#      LUT5                        : 300
+#      LUT6                        : 927
+#      MUXCY                       : 393
+#      MUXF7                       : 17
+#      VCC                         : 1
+#      XORCY                       : 406
+# FlipFlops/Latches                : 61
+#      FD                          : 41
+#      FDR                         : 13
+#      FDS                         : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 20
+#      OBUF                        : 15
+# DSPs                             : 1
+#      DSP48E1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              61  out of  126800     0%  
+ Number of Slice LUTs:                 1602  out of  63400     2%  
+    Number used as Logic:              1602  out of  63400     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1621
+   Number with an unused Flip Flop:    1560  out of   1621    96%  
+   Number with an unused LUT:            19  out of   1621     1%  
+   Number of fully used LUT-FF pairs:    42  out of   1621     2%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    210    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      1  out of    240     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 61    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 15.071ns (Maximum Frequency: 66.354MHz)
+   Minimum input arrival time before clock: 5.643ns
+   Maximum output required time after clock: 0.640ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 15.071ns (frequency: 66.354MHz)
+  Total number of paths / destination ports: 4055392488891 / 73
+-------------------------------------------------------------------------
+Delay:               15.071ns (Levels of Logic = 41)
+  Source:            result_13_1 (FF)
+  Destination:       ctl7seg1/tmpin_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: result_13_1 to ctl7seg1/tmpin_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.683  result_13_1 (result_13_1)
+     LUT5:I0->O            5   0.097   0.530  ctl7seg1/result[15]_PWR_2_o_div_17_OUT<10>1 (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_15_OUT_Madd_lut<10>)
+     LUT6:I3->O           17   0.097   0.354  ctl7seg1/result[15]_PWR_2_o_div_17_OUT<8>11 (ctl7seg1/result[15]_PWR_2_o_div_17_OUT<8>)
+     MUXCY:DI->O           1   0.337   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_17_OUT_Madd_cy<8> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_17_OUT_Madd_cy<8>)
+     XORCY:CI->O          13   0.370   0.351  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_17_OUT_Madd_xor<9> (ctl7seg1/result[15]_PWR_2_o_mod_18/a[15]_GND_6_o_add_17_OUT<9>)
+     LUT3:I2->O            3   0.097   0.289  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[9]_a[15]_MUX_598_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[9]_a[15]_MUX_598_o)
+     MUXCY:DI->O           1   0.337   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_19_OUT_Madd_cy<9> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_19_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_19_OUT_Madd_cy<10> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_19_OUT_Madd_cy<10>)
+     XORCY:CI->O           2   0.370   0.300  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_19_OUT_Madd_xor<11> (ctl7seg1/result[15]_PWR_2_o_mod_18/a[15]_GND_6_o_add_19_OUT<11>)
+     LUT6:I5->O           15   0.097   0.576  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[11]_a[15]_MUX_612_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[11]_a[15]_MUX_612_o)
+     LUT6:I3->O            5   0.097   0.314  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[8]_a[15]_MUX_631_o111_SW0 (N280)
+     LUT6:I5->O            6   0.097   0.534  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[10]_a[15]_MUX_629_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[10]_a[15]_MUX_629_o)
+     LUT5:I2->O           30   0.097   0.486  ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0012_INV_492_o2_SW0 (N74)
+     LUT6:I4->O            1   0.097   0.279  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[7]_a[15]_MUX_648_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_lut<7>)
+     MUXCY:DI->O           1   0.337   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<7> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<8> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<9> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<10> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<11> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_cy<11>)
+     XORCY:CI->O           4   0.370   0.309  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_25_OUT_Madd_xor<12> (ctl7seg1/result[15]_PWR_2_o_mod_18/a[15]_GND_6_o_add_25_OUT<12>)
+     LUT6:I5->O            2   0.097   0.688  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[12]_a[15]_MUX_659_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[12]_a[15]_MUX_659_o)
+     LUT6:I1->O           31   0.097   0.486  ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0014_INV_526_o21 (ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0014_INV_526_o2)
+     LUT6:I4->O            7   0.097   0.721  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[9]_a[15]_MUX_678_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[9]_a[15]_MUX_678_o)
+     LUT6:I0->O           15   0.097   0.444  ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0015_INV_543_o21 (ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0015_INV_543_o2)
+     LUT6:I4->O           28   0.097   0.385  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[4]_a[15]_MUX_699_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_lut<4>)
+     MUXCY:DI->O           1   0.337   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<4> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<5> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<6> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<7> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<8> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<9> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<10> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<11> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<12> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<13> (ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_cy<13>)
+     XORCY:CI->O           1   0.370   0.295  ctl7seg1/result[15]_PWR_2_o_mod_18/Madd_a[15]_GND_6_o_add_31_OUT_Madd_xor<14> (ctl7seg1/result[15]_PWR_2_o_mod_18/a[15]_GND_6_o_add_31_OUT<14>)
+     LUT6:I5->O            2   0.097   0.687  ctl7seg1/result[15]_PWR_2_o_mod_18/Mmux_a[14]_a[15]_MUX_705_o11 (ctl7seg1/result[15]_PWR_2_o_mod_18/a[14]_a[15]_MUX_705_o)
+     LUT5:I0->O            0   0.097   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Mcompar_BUS_0017_INV_577_o_lutdi3 (ctl7seg1/result[15]_PWR_2_o_mod_18/Mcompar_BUS_0017_INV_577_o_lutdi3)
+     MUXCY:DI->O           1   0.337   0.000  ctl7seg1/result[15]_PWR_2_o_mod_18/Mcompar_BUS_0017_INV_577_o_cy<3> (ctl7seg1/result[15]_PWR_2_o_mod_18/Mcompar_BUS_0017_INV_577_o_cy<3>)
+     MUXCY:CI->O           3   0.253   0.305  ctl7seg1/result[15]_PWR_2_o_mod_18/Mcompar_BUS_0017_INV_577_o_cy<4> (ctl7seg1/result[15]_PWR_2_o_mod_18/BUS_0017_INV_577_o)
+     LUT6:I5->O            1   0.097   0.295  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT612 (ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT611)
+     LUT6:I5->O            1   0.097   0.000  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT614 (ctl7seg1/count[11]_count[11]_mux_25_OUT<2>)
+     FD:D                      0.008          ctl7seg1/tmpin_2
+    ----------------------------------------
+    Total                     15.071ns (5.758ns logic, 9.313ns route)
+                                       (38.2% logic, 61.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2351 / 34
+-------------------------------------------------------------------------
+Offset:              5.643ns (Levels of Logic = 10)
+  Source:            b<4> (PAD)
+  Destination:       ctl7seg1/tmpin_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: b<4> to ctl7seg1/tmpin_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.001   0.739  b_4_IBUF (b_4_IBUF)
+     LUT5:I0->O            6   0.097   0.579  ctl7seg1/b[7]_PWR_2_o_div_8/Mmux_n026751 (ctl7seg1/b[7]_PWR_2_o_div_8/Madd_a[7]_GND_4_o_add_15_OUT[7:0]_Madd_lut<4>)
+     LUT4:I0->O            4   0.097   0.707  ctl7seg1/b[7]_PWR_2_o_div_8_OUT<1>1 (ctl7seg1/b[7]_PWR_2_o_mod_9/Madd_a[7]_GND_3_o_add_17_OUT_Madd_Madd_cy<1>)
+     LUT6:I0->O            2   0.097   0.299  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT882111 (ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT88211)
+     LUT6:I5->O            1   0.097   0.379  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT86 (ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT811)
+     LUT6:I4->O            1   0.097   0.683  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT89 (ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT814)
+     LUT6:I1->O            2   0.097   0.283  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT810 (ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT815)
+     MUXF7:S->O            1   0.335   0.556  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT812_SW1 (N241)
+     LUT6:I2->O            1   0.097   0.295  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT816_SW1 (N779)
+     LUT6:I5->O            1   0.097   0.000  ctl7seg1/Mmux_count[11]_count[11]_mux_25_OUT816 (ctl7seg1/count[11]_count[11]_mux_25_OUT<3>)
+     FD:D                      0.008          ctl7seg1/tmpin_3
+    ----------------------------------------
+    Total                      5.643ns (1.120ns logic, 4.523ns route)
+                                       (19.8% logic, 80.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            ctl7seg1/sledctl_6 (FF)
+  Destination:       sledctl<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ctl7seg1/sledctl_6 to sledctl<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.361   0.279  ctl7seg1/sledctl_6 (ctl7seg1/sledctl_6)
+     OBUF:I->O                 0.000          sledctl_6_OBUF (sledctl<6>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   15.071|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 37.36 secs
+ 
+--> 
+
+Total memory usage is 359192 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

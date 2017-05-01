@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
+Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml Lab7_main.twx Lab7_main.ncd -o Lab7_main.twr Lab7_main.pcf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml Lab7_main.twx Lab7_main.ncd -o Lab7_main.twr Lab7_main.pcf
 -ucf Lab7.ucf
 
 Design file:              Lab7_main.ncd
@@ -89,14 +89,14 @@ clk            |   17.239|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Apr 21 14:52:29 2017 
+Analysis completed Mon May 01 20:16:12 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 693 MB
+Peak Memory Usage: 418 MB
 
 
 
