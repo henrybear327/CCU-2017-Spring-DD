@@ -22,7 +22,7 @@ module cla_16bit( a , b , cin , s , cout);
 	carry_generator carry_gen_2(.p(p[7:4]) , .g(g[7:4]) , .cin(c_4_8_12[1]) , .c(c[7:4]) , .gG(gG[1]), .gP(gP[1]));
 	carry_generator carry_gen_3(.p(p[11:8]) , .g(g[11:8]) , .cin(c_4_8_12[2]) , .c(c[11:8]) , .gG(gG[2]), .gP(gP[2]));
 	carry_generator carry_gen_4(.p(p[15:12]) , .g(g[15:12]) , .cin(c_4_8_12[3]) , .c(c[15:12]) , .gG(gG[3]), .gP(gP[3]));
-	carry_generator carry_gen_5(.p(gP) , .g(gG) , .cin(cin) , .c(c_4_8_12) , .cout(cout));
+	carry_generator carry_gen_5(.p(gP) , .g(gG) , .cin(cin) , .c(c_4_8_12) , .cout(cout)); // 大P大G
 
 	sum_generator cla4_sum1(.a(a[3:0]), .b(b[3:0]), .c(c[3:0]), .s(s[3:0]));
 	sum_generator cla4_sum2(.a(a[7:4]), .b(b[7:4]), .c(c[7:4]), .s(s[7:4]));
