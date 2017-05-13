@@ -1,0 +1,503 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: tri_led.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tri_led.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tri_led"
+Output Format                      : NGC
+Target Device                      : xc7a100t-2-csg324
+
+---- Source Options
+Top Module Name                    : tri_led
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\mac\home\Desktop\RGB_LED\tri_led.v" into library work
+Parsing module <tri_led>.
+WARNING:HDLCompiler:370 - "\\mac\home\Desktop\RGB_LED\tri_led.v" Line 27: Empty port in module declaration
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <tri_led>.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\RGB_LED\tri_led.v" Line 68: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\RGB_LED\tri_led.v" Line 69: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\RGB_LED\tri_led.v" Line 70: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "\\mac\home\Desktop\RGB_LED\tri_led.v" Line 75: Signal <second> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <tri_led>.
+    Related source file is "\\mac\home\Desktop\RGB_LED\tri_led.v".
+    Found 4-bit register for signal <second>.
+    Found 10-bit register for signal <count_div>.
+    Found 1-bit register for signal <RGB1_Red>.
+    Found 1-bit register for signal <RGB1_Green>.
+    Found 1-bit register for signal <RGB1_Blue>.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit adder for signal <cnt[31]_GND_1_o_add_2_OUT> created at line 52.
+    Found 4-bit adder for signal <second[3]_GND_1_o_add_4_OUT> created at line 56.
+    Found 10-bit adder for signal <count_div[9]_GND_1_o_add_14_OUT> created at line 67.
+    Found 8x30-bit Read Only RAM for signal <_n0272>
+WARNING:Xst:737 - Found 1-bit latch for signal <red<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <n0000> created at line 51
+    Found 4-bit comparator greater for signal <n0003> created at line 55
+    Found 10-bit comparator greater for signal <n0013> created at line 67
+    Found 10-bit comparator greater for signal <n0017> created at line 68
+    Found 10-bit comparator greater for signal <n0020> created at line 69
+    Found 10-bit comparator greater for signal <n0023> created at line 70
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred  30 Latch(s).
+	inferred   6 Comparator(s).
+Unit <tri_led> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x30-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 6
+ 1-bit register                                        : 3
+ 10-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+# Latches                                              : 30
+ 1-bit latch                                           : 30
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 4
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <tri_led>.
+The following registers are absorbed into counter <count_div>: 1 register on signal <count_div>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <second>: 1 register on signal <second>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0272> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 30-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <second<2:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <tri_led> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x30-bit single-port distributed Read Only RAM        : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 4
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <red_9> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <green_9> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <green_8> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blue_9> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blue_8> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <red_8> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <red_3> in Unit <tri_led> is equivalent to the following 2 FFs/Latches, which will be removed : <red_0> <red_4> 
+INFO:Xst:2261 - The FF/Latch <green_6> in Unit <tri_led> is equivalent to the following 6 FFs/Latches, which will be removed : <green_5> <green_4> <green_1> <green_3> <green_2> <green_0> 
+INFO:Xst:2261 - The FF/Latch <blue_6> in Unit <tri_led> is equivalent to the following 6 FFs/Latches, which will be removed : <blue_3> <blue_5> <blue_4> <blue_2> <blue_1> <blue_0> 
+INFO:Xst:2261 - The FF/Latch <red_6> in Unit <tri_led> is equivalent to the following 3 FFs/Latches, which will be removed : <red_5> <red_2> <red_1> 
+
+Optimizing unit <tri_led> ...
+WARNING:Xst:1710 - FF/Latch <count_div_9> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_27> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_30> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_28> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_29> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_31> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <second_3> (without init value) has a constant value of 0 in block <tri_led>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <count_div_0> in Unit <tri_led> is equivalent to the following FF/Latch, which will be removed : <cnt_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tri_led, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tri_led.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 208
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 34
+#      LUT2                        : 8
+#      LUT3                        : 36
+#      LUT4                        : 6
+#      LUT5                        : 17
+#      LUT6                        : 1
+#      MUXCY                       : 63
+#      VCC                         : 1
+#      XORCY                       : 35
+# FlipFlops/Latches                : 48
+#      FD                          : 24
+#      FDR                         : 17
+#      LD                          : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 1
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              48  out of  126800     0%  
+ Number of Slice LUTs:                  108  out of  63400     0%  
+    Number used as Logic:               108  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    111
+   Number with an unused Flip Flop:      63  out of    111    56%  
+   Number with an unused LUT:             3  out of    111     2%  
+   Number of fully used LUT-FF pairs:    45  out of    111    40%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   5  out of    210     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+_n0250(out1:O)                     | NONE(*)(red_3)         | 7     |
+clk100mhz                          | BUFGP                  | 41    |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.901ns (Maximum Frequency: 344.649MHz)
+   Minimum input arrival time before clock: 2.030ns
+   Maximum output required time after clock: 0.742ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk100mhz'
+  Clock period: 2.901ns (frequency: 344.649MHz)
+  Total number of paths / destination ports: 1787 / 58
+-------------------------------------------------------------------------
+Delay:               2.901ns (Levels of Logic = 9)
+  Source:            cnt_4 (FF)
+  Destination:       cnt_19 (FF)
+  Source Clock:      clk100mhz rising
+  Destination Clock: clk100mhz rising
+
+  Data Path: cnt_4 to cnt_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.398   0.785  cnt_4 (cnt_4)
+     LUT5:I0->O            1   0.105   0.000  Mcompar_n0000_lut<0> (Mcompar_n0000_lut<0>)
+     MUXCY:S->O            1   0.392   0.000  Mcompar_n0000_cy<0> (Mcompar_n0000_cy<0>)
+     MUXCY:CI->O           1   0.025   0.000  Mcompar_n0000_cy<1> (Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.025   0.000  Mcompar_n0000_cy<2> (Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.025   0.000  Mcompar_n0000_cy<3> (Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.025   0.000  Mcompar_n0000_cy<4> (Mcompar_n0000_cy<4>)
+     MUXCY:CI->O           1   0.025   0.000  Mcompar_n0000_cy<5> (Mcompar_n0000_cy<5>)
+     MUXCY:CI->O          22   0.025   0.000  Mcompar_n0000_cy<6> (Mcompar_n0000_cy<6>)
+     MUXCY:CI->O           8   0.296   0.378  Mcount_cnt_val321_cy (Mcount_cnt_val)
+     FDR:R                     0.397          cnt_26
+    ----------------------------------------
+    Total                      2.901ns (1.738ns logic, 1.164ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100mhz'
+  Total number of paths / destination ports: 44 / 41
+-------------------------------------------------------------------------
+Offset:              2.030ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       cnt_19 (FF)
+  Destination Clock: clk100mhz rising
+
+  Data Path: rst to cnt_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.001   0.468  rst_IBUF (rst_IBUF)
+     INV:I->O              1   0.123   0.000  Mcount_cnt_val321_lut_INV_0 (Mcount_cnt_val321_lut)
+     MUXCY:S->O            8   0.663   0.378  Mcount_cnt_val321_cy (Mcount_cnt_val)
+     FDR:R                     0.397          cnt_26
+    ----------------------------------------
+    Total                      2.030ns (1.184ns logic, 0.846ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100mhz'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              0.742ns (Levels of Logic = 1)
+  Source:            Red_OUT1 (FF)
+  Destination:       RGB1_Red (PAD)
+  Source Clock:      clk100mhz rising
+
+  Data Path: Red_OUT1 to RGB1_Red
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.398   0.344  Red_OUT1 (Red_OUT1)
+     OBUF:I->O                 0.000          RGB1_Red_OBUF (RGB1_Red)
+    ----------------------------------------
+    Total                      0.742ns (0.398ns logic, 0.344ns route)
+                                       (53.6% logic, 46.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock _n0250
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100mhz      |         |         |    1.158|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk100mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+_n0250         |         |    2.126|         |         |
+clk100mhz      |    2.901|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.59 secs
+ 
+--> 
+
+Total memory usage is 348120 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   48 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

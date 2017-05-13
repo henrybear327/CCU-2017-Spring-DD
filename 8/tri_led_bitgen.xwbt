@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Y:\Desktop\RGB_LED\tri_led.ncd
+OUTFILE=Y:\Desktop\RGB_LED\tri_led.bit
+FAMILY=Artix7
+PART=xc7a100t-2csg324
+WORKINGDIR=Y:\Desktop\RGB_LED
+LICENSE=WebPack
+USER_INFO=__0_0_0

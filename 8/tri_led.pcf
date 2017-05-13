@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon May 08 20:05:35 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RGB1_Blue" LOCATE = SITE "R12" LEVEL 1;
+COMP "clk100mhz" LOCATE = SITE "E3" LEVEL 1;
+COMP "RGB1_Red" LOCATE = SITE "N15" LEVEL 1;
+COMP "RGB1_Green" LOCATE = SITE "M16" LEVEL 1;
+COMP "rst" LOCATE = SITE "N17" LEVEL 1;
+SCHEMATIC END;
+
