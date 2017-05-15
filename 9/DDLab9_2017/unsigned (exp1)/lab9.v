@@ -32,22 +32,24 @@ begin
 		Product  <= 16'b0;
 		Mplicand <= 16'b0;
 		Mplier   <= 8'b0;
-	end 
+	end
 	else if(Counter == 6'd0) begin
 		Product	 	<= 16'b0;
 		Mplicand <= {8'b0,in_a};
 		Mplier	 <= in_b;
-		
-	end 
-	else if(Counter <=6'd8) 
+
+	end
+	else if(Counter <=6'd8)
 	begin
 	/* write down your design below */
 
-	
-	
-	
+	if(Mplier[0] == 1'b1)
+	Product <= Mplicand + Product;
+	Mplicand <= Mplicand << 1;
+	Mplier <= Mplier >> 1;
+
 	/* write down your design upon */
-	end 
+	end
 	else begin
 		Product 	<= Product;
 		Mplicand	<= Mplicand;
