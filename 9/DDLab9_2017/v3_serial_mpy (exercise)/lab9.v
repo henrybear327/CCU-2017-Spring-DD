@@ -30,41 +30,41 @@ begin
 	if(RST) begin
 		Product  <= 16'b0;
 		Mplicand <= 16'b0;
-	end 
+	end
 	else if(Counter == 6'd0) begin
 /* write down your design below */
-		
-		
-	
-			
-		
-			
-	
-			
-		
-/* write down your design upon */		
-	end 
-	else if(Counter <=6'd8) 
+
+
+
+
+
+
+
+
+
+/* write down your design upon */
+	end
+	else if(Counter <=6'd8)
 	begin
 /* write down your design below */
-	
-			
-			
-		
-			
-/* write down your design upon */	
-	end 
+
+
+
+
+
+/* write down your design upon */
+	end
 	else begin
 /* write down your design below */
-	
-		
-	
-			
-	
-	
-	
-			
-/* write down your design upon */	
+
+
+
+
+
+
+
+
+/* write down your design upon */
 	end
 end
 
