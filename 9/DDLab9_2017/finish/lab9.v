@@ -28,48 +28,63 @@ end
 always @(posedge CLK or posedge RST)
 begin
 	if(RST) begin
-		Product  <= 16'b0;
-		Mplicand <= 16'b0;
-	end 
-	else if(Counter == 6'd0) begin
-/* write down your design below */
-		if(in_a[7]==1'b1)
-			Mplicand <= {(~in_a)+8'b1,8'b0};
-		else
-			Mplicand <= {in_a,8'b0};
-		if(in_b[7]==1'b1)
-			Product	 <= {8'b0,(~in_b)+8'b1};
-		else
-			Product	 <= {8'b0,in_b};
-		sign <= in_a[7]^in_b[7];
+		Product  = 16'b0;
+		Mplicand = 16'b0;
+	end
 
-
-/* write down your design upon */		
-	end 
-	else if(Counter <=6'd8) 
+	else if(Counter == 6'd0)
 	begin
-/* write down your design below */
-		if(Product[0]==1'b1)
-			Product <= {Product+Mplicand}>>1;
-			
+		/* write down your design below */
+		if(in_a[7]==1'b1)
+			Mplicand = { (~in_a) + 8'b1, 8'b0};
 		else
-			Product <= Product>>1;
+			Mplicand = { in_a, 8'b0};
 
-/* write down your design upon */	
-	end 
-	else begin
-/* write down your design below */
-	if(sign)
+		if(in_b[7]==1'b1)
+			Product	 = {8'b0, (~in_b) + 8'b1};
+		else
+			Product	 = {8'b0,in_b};
+
+		sign <= in_a[7]^in_b[7];
+		/* write down your design upon */
+	end
+
+	else if(Counter <=6'd8)
+	begin
+		/* write down your design below */
+
+		/*
+		if(Mplier[0] == 1'b1)
 		begin
-			Product <= ~Product+16'b1;
-			sign <= 1'b0;
+			Product = Mplicand + Product;
 		end
-	else
-		Product 	<= Product;
-			
-	Mplicand	<= Mplicand;
 
-/* write down your design upon */	
+		Mplicand = Mplicand << 1;
+		Mplier = Mplier >> 1;
+		*/
+
+		if(Product[0]==1'b1)
+			Product = {Product + Mplicand} >> 1;
+		else
+			Product = Product >> 1;
+
+		/* write down your design upon */
+	end
+
+	else
+
+	begin
+		/* write down your design below */
+		if(sign)
+			begin
+				Product = ~Product+16'b1;
+				sign = 1'b0;
+			end
+		else
+			Product 	= Product;
+
+		Mplicand	= Mplicand;
+		/* write down your design upon */
 	end
 end
 
