@@ -1,0 +1,49 @@
+INFO:sim:172 - Generating IP...
+Resolving generics for 'adc'...
+Applying external generics to 'adc'...
+Delivering associated files for 'adc'...
+WARNING:sim - Component xadc_wiz_v2_1 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'adc'...
+WARNING:sim - Overwriting existing file
+   C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc/doc/ug772_xadc_wiz.
+   pdf with file from view xilinx_documentation
+Delivered 3 files into directory
+C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc
+Delivered 1 file into directory
+C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc
+Generating ASY schematic symbol...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'adc'...
+Generating metadata file...
+Generating ISE project...
+XCO file found: adc.xco
+XMDF file found: adc_xmdf.tcl
+Adding
+C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc/example_design/adc_exd
+es.v -view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc/example_design/adc
+   _exdes.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc.asy -view all
+-origin_type imported
+Adding C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc.v -view all
+-origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc.v" into library
+   work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc.ucf -view all
+-origin_type created
+Adding C:/Users/ECL/Desktop/Lab10/Lab10_3/ipcore_dir/tmp/_cg/adc.veo -view all
+-origin_type imported
+WARNING:coreutil - WARNING: This core does not have a top level called "/adc"
+WARNING:coreutil - WARNING: Top level has been set to "/adc_exdes"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'adc'.

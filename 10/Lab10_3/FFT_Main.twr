@@ -1,0 +1,2090 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml FFT_Main.twx FFT_Main.ncd -o FFT_Main.twr FFT_Main.pcf
+-ucf Nexys4.ucf
+
+Design file:              FFT_Main.ncd
+Physical constraint file: FFT_Main.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2987527469089126900000000000000 paths analyzed, 461 endpoints analyzed, 123 failing endpoints
+ 123 timing errors detected. (123 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  41.433ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dig5_1 (SLICE_X5Y59.A6), 334172814356215510000000000000 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.433ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.310ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.088ns (1.106 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X50Y90.B5      net (fanout=117)      0.579   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X50Y90.BMUX    Tilo                  0.255   dec[32]_PWR_1_o_div_10/n2724<5>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o1281
+    SLICE_X60Y87.A2      net (fanout=1)        0.880   dec[32]_PWR_1_o_div_16/a[5]_a[32]_MUX_7755_o
+    SLICE_X60Y87.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X5Y59.A6       net (fanout=3)        0.611   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X5Y59.CLK      Tas                   0.067   dig5<1>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o21
+                                                       dig5_1
+    -------------------------------------------------  ---------------------------
+    Total                                     41.310ns (15.652ns logic, 25.658ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.433ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.310ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.088ns (1.106 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X5Y59.A6       net (fanout=3)        0.611   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X5Y59.CLK      Tas                   0.067   dig5<1>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o21
+                                                       dig5_1
+    -------------------------------------------------  ---------------------------
+    Total                                     41.310ns (15.401ns logic, 25.909ns route)
+                                                       (37.3% logic, 62.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.428ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.305ns (Levels of Logic = 56)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.088ns (1.106 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<32>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_xor<32>
+    SLICE_X35Y65.C4      net (fanout=9)        0.663   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<29>
+    SLICE_X35Y65.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<16>1
+                                                       dec[32]_PWR_1_o_div_16_OUT<15>22
+    SLICE_X32Y67.D6      net (fanout=19)       0.409   dec[32]_PWR_1_o_div_16_OUT<15>21
+    SLICE_X32Y67.D       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1161_SW0
+    SLICE_X35Y67.B4      net (fanout=12)       0.548   N227
+    SLICE_X35Y67.B       Tilo                  0.097   N427
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1171
+    SLICE_X39Y66.B3      net (fanout=6)        0.608   dec[32]_PWR_1_o_div_16/a[25]_a[32]_MUX_7372_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X5Y59.A6       net (fanout=3)        0.611   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X5Y59.CLK      Tas                   0.067   dig5<1>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o21
+                                                       dig5_1
+    -------------------------------------------------  ---------------------------
+    Total                                     41.305ns (14.820ns logic, 26.485ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dig5_2 (SLICE_X7Y57.B6), 334172814356215510000000000000 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.298ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.176ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.087ns (1.107 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X50Y90.B5      net (fanout=117)      0.579   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X50Y90.BMUX    Tilo                  0.255   dec[32]_PWR_1_o_div_10/n2724<5>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o1281
+    SLICE_X60Y87.A2      net (fanout=1)        0.880   dec[32]_PWR_1_o_div_16/a[5]_a[32]_MUX_7755_o
+    SLICE_X60Y87.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X7Y57.B6       net (fanout=3)        0.479   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X7Y57.CLK      Tas                   0.065   dig5<2>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o31
+                                                       dig5_2
+    -------------------------------------------------  ---------------------------
+    Total                                     41.176ns (15.650ns logic, 25.526ns route)
+                                                       (38.0% logic, 62.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.298ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.176ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.087ns (1.107 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X7Y57.B6       net (fanout=3)        0.479   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X7Y57.CLK      Tas                   0.065   dig5<2>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o31
+                                                       dig5_2
+    -------------------------------------------------  ---------------------------
+    Total                                     41.176ns (15.399ns logic, 25.777ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.293ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.171ns (Levels of Logic = 56)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.087ns (1.107 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<32>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_xor<32>
+    SLICE_X35Y65.C4      net (fanout=9)        0.663   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<29>
+    SLICE_X35Y65.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<16>1
+                                                       dec[32]_PWR_1_o_div_16_OUT<15>22
+    SLICE_X32Y67.D6      net (fanout=19)       0.409   dec[32]_PWR_1_o_div_16_OUT<15>21
+    SLICE_X32Y67.D       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1161_SW0
+    SLICE_X35Y67.B4      net (fanout=12)       0.548   N227
+    SLICE_X35Y67.B       Tilo                  0.097   N427
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1171
+    SLICE_X39Y66.B3      net (fanout=6)        0.608   dec[32]_PWR_1_o_div_16/a[25]_a[32]_MUX_7372_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X7Y57.B6       net (fanout=3)        0.479   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X7Y57.CLK      Tas                   0.065   dig5<2>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o31
+                                                       dig5_2
+    -------------------------------------------------  ---------------------------
+    Total                                     41.171ns (14.818ns logic, 26.353ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dig5_3 (SLICE_X0Y58.A5), 334172814356215510000000000000 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.274ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.154ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.085ns (1.109 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X50Y90.B5      net (fanout=117)      0.579   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X50Y90.BMUX    Tilo                  0.255   dec[32]_PWR_1_o_div_10/n2724<5>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o1281
+    SLICE_X60Y87.A2      net (fanout=1)        0.880   dec[32]_PWR_1_o_div_16/a[5]_a[32]_MUX_7755_o
+    SLICE_X60Y87.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X0Y58.A5       net (fanout=3)        0.455   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X0Y58.CLK      Tas                   0.067   dig5<3>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o41
+                                                       dig5_3
+    -------------------------------------------------  ---------------------------
+    Total                                     41.154ns (15.652ns logic, 25.502ns route)
+                                                       (38.0% logic, 62.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.274ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.154ns (Levels of Logic = 55)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.085ns (1.109 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X33Y66.B5      net (fanout=6)        0.437   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<25>
+    SLICE_X33Y66.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_lut<25>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<27>
+    SLICE_X33Y67.BMUX    Tcinb                 0.358   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_37_OUT_cy<31>
+    SLICE_X32Y67.C3      net (fanout=2)        0.365   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_37_OUT<29>
+    SLICE_X32Y67.C       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1211
+    SLICE_X39Y66.B1      net (fanout=6)        0.850   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7368_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X0Y58.A5       net (fanout=3)        0.455   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X0Y58.CLK      Tas                   0.067   dig5<3>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o41
+                                                       dig5_3
+    -------------------------------------------------  ---------------------------
+    Total                                     41.154ns (15.401ns logic, 25.753ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -31.269ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0045 (DSP)
+  Destination:          dig5_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      41.149ns (Levels of Logic = 56)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.085ns (1.109 - 1.194)
+  Source Clock:         CLK100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0045 to dig5_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y32.P27      Tdspcko_P_PREG        0.329   Mmult_n0045
+                                                       Mmult_n0045
+    SLICE_X30Y63.A5      net (fanout=93)       1.352   dec<17>
+    SLICE_X30Y63.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_lut<17>_INV_0
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<20>
+    SLICE_X30Y64.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<24>
+    SLICE_X30Y65.COUT    Tbyp                  0.092   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_cy<28>
+    SLICE_X30Y66.AMUX    Tcina                 0.269   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<32>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_35_OUT_xor<32>
+    SLICE_X35Y65.C4      net (fanout=9)        0.663   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_35_OUT<29>
+    SLICE_X35Y65.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<16>1
+                                                       dec[32]_PWR_1_o_div_16_OUT<15>22
+    SLICE_X32Y67.D6      net (fanout=19)       0.409   dec[32]_PWR_1_o_div_16_OUT<15>21
+    SLICE_X32Y67.D       Tilo                  0.097   N227
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1161_SW0
+    SLICE_X35Y67.B4      net (fanout=12)       0.548   N227
+    SLICE_X35Y67.B       Tilo                  0.097   N427
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7397_o1171
+    SLICE_X39Y66.B3      net (fanout=6)        0.608   dec[32]_PWR_1_o_div_16/a[25]_a[32]_MUX_7372_o
+    SLICE_X39Y66.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>21
+    SLICE_X39Y66.A4      net (fanout=8)        0.355   dec[32]_PWR_1_o_div_16_OUT<14>2
+    SLICE_X39Y66.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7381_o
+                                                       dec[32]_PWR_1_o_div_16_OUT<14>26
+    SLICE_X39Y65.D2      net (fanout=75)       0.742   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_41_OUT_Madd_lut<14>
+    SLICE_X39Y65.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16_OUT<13>33
+                                                       dec[32]_PWR_1_o_div_16_OUT<13>34
+    SLICE_X36Y63.B6      net (fanout=20)       0.529   dec[32]_PWR_1_o_div_16_OUT<13>33
+    SLICE_X36Y63.B       Tilo                  0.097   N282
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>_SW1
+    SLICE_X41Y68.B3      net (fanout=1)        0.592   N282
+    SLICE_X41Y68.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_lut<18>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<20>
+    SLICE_X41Y69.AMUX    Tcina                 0.286   dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+                                                       dec[32]_PWR_1_o_div_16/Madd_a[32]_GND_11_o_add_43_OUT_cy<24>
+    SLICE_X46Y75.C1      net (fanout=2)        1.022   dec[32]_PWR_1_o_div_16/a[32]_GND_11_o_add_43_OUT<21>
+    SLICE_X46Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7541_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7496_o1131
+    SLICE_X44Y74.B1      net (fanout=5)        0.811   dec[32]_PWR_1_o_div_16/a[21]_a[32]_MUX_7475_o
+    SLICE_X44Y74.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<3>
+    SLICE_X44Y75.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7481_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<11>_cy<4>
+    SLICE_X48Y76.D6      net (fanout=81)       0.566   dec[32]_PWR_1_o_div_16_OUT<11>
+    SLICE_X48Y76.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7529_o191
+    SLICE_X46Y77.B1      net (fanout=3)        0.734   dec[32]_PWR_1_o_div_16/a[18]_a[32]_MUX_7511_o
+    SLICE_X46Y77.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<3>
+    SLICE_X46Y78.AMUX    Tcina                 0.349   dec[32]_PWR_1_o_div_16/a[29]_a[32]_MUX_7533_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<10>_cy<4>
+    SLICE_X44Y72.A6      net (fanout=93)       0.614   dec[32]_PWR_1_o_div_16_OUT<10>
+    SLICE_X44Y72.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7477_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7562_o1101
+    SLICE_X48Y78.B2      net (fanout=2)        0.960   dec[32]_PWR_1_o_div_16/a[19]_a[32]_MUX_7543_o
+    SLICE_X48Y78.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<3>
+    SLICE_X48Y79.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7538_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<9>_cy<4>
+    SLICE_X48Y75.C6      net (fanout=77)       0.638   dec[32]_PWR_1_o_div_16_OUT<9>
+    SLICE_X48Y75.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7514_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7595_o161
+    SLICE_X48Y80.B2      net (fanout=4)        0.988   dec[32]_PWR_1_o_div_16/a[15]_a[32]_MUX_7580_o
+    SLICE_X48Y80.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<3>
+    SLICE_X48Y81.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16/a[26]_a[32]_MUX_7602_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<8>_cy<4>
+    SLICE_X52Y81.C6      net (fanout=102)      0.618   dec[32]_PWR_1_o_div_16_OUT<8>
+    SLICE_X52Y81.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7628_o111
+    SLICE_X49Y83.A2      net (fanout=5)        0.846   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7618_o
+    SLICE_X49Y83.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<3>
+    SLICE_X49Y84.AMUX    Tcina                 0.369   dec[32]_PWR_1_o_div_16_OUT<7>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<7>_cy<4>
+    SLICE_X52Y81.A6      net (fanout=84)       0.570   dec[32]_PWR_1_o_div_16_OUT<7>
+    SLICE_X52Y81.A       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[10]_a[32]_MUX_7651_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7661_o171
+    SLICE_X53Y84.B1      net (fanout=4)        0.820   dec[32]_PWR_1_o_div_16/a[16]_a[32]_MUX_7645_o
+    SLICE_X53Y84.COUT    Topcyb                0.509   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<3>
+    SLICE_X53Y85.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/a[23]_a[32]_MUX_7704_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<6>_cy<5>
+    SLICE_X56Y84.B6      net (fanout=109)      0.608   dec[32]_PWR_1_o_div_16_OUT<6>
+    SLICE_X56Y84.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7694_o151
+    SLICE_X54Y86.B2      net (fanout=2)        0.814   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7680_o
+    SLICE_X54Y86.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<3>
+    SLICE_X54Y87.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[24]_a[32]_MUX_7736_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<5>_cy<5>
+    SLICE_X54Y95.A5      net (fanout=89)       0.783   dec[32]_PWR_1_o_div_16_OUT<5>
+    SLICE_X54Y95.AMUX    Tilo                  0.239   dec[32]_PWR_1_o_div_8/n2820<6>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7727_o1291
+    SLICE_X53Y88.A3      net (fanout=1)        0.713   dec[32]_PWR_1_o_div_16/a[6]_a[32]_MUX_7721_o
+    SLICE_X53Y88.COUT    Topcya                0.492   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<3>
+    SLICE_X53Y89.BMUX    Tcinb                 0.272   dec[32]_PWR_1_o_div_16/n2534<11>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<4>_cy<5>
+    SLICE_X60Y88.D5      net (fanout=117)      0.746   dec[32]_PWR_1_o_div_16_OUT<4>
+    SLICE_X60Y88.D       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_a[0]_a[32]_MUX_7760_o151
+    SLICE_X60Y87.C1      net (fanout=3)        0.964   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+    SLICE_X60Y87.COUT    Topcyc                0.383   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_lut<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<3>
+    SLICE_X60Y88.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/a[14]_a[32]_MUX_7746_o
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<3>_cy<5>
+    SLICE_X52Y89.C6      net (fanout=121)      0.643   dec[32]_PWR_1_o_div_16_OUT<3>
+    SLICE_X52Y89.C       Tilo                  0.097   dec[32]_PWR_1_o_div_16/n2534<10>
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n266321
+    SLICE_X56Y91.B1      net (fanout=2)        0.910   dec[32]_PWR_1_o_div_16/n2663<10>
+    SLICE_X56Y91.COUT    Topcyb                0.499   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_lut<1>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<3>
+    SLICE_X56Y92.BMUX    Tcinb                 0.273   dec[32]_PWR_1_o_div_16/n2534<17>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<2>_cy<5>
+    SLICE_X59Y85.B6      net (fanout=96)       0.727   dec[32]_PWR_1_o_div_16_OUT<2>
+    SLICE_X59Y85.B       Tilo                  0.097   dec[32]_PWR_1_o_div_16/a[7]_a[32]_MUX_7753_o
+                                                       dec[32]_PWR_1_o_div_16/Mmux_n2667291
+    SLICE_X56Y89.A1      net (fanout=1)        0.759   dec[32]_PWR_1_o_div_16/n2667<5>
+    SLICE_X56Y89.COUT    Topcya                0.476   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_lut<0>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CIN     net (fanout=1)        0.000   dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<3>
+    SLICE_X56Y90.CMUX    Tcinc                 0.300   dec[32]_PWR_1_o_div_16/n2534<2>
+                                                       dec[32]_PWR_1_o_div_16/Mcompar_o<1>_cy<6>
+    SLICE_X0Y50.A6       net (fanout=36)       1.838   dec[32]_PWR_1_o_div_16_OUT<1>
+    SLICE_X0Y50.COUT     Topcya                0.492   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_lut<1>1_INV_0
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<4>
+    SLICE_X0Y51.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<8>
+    SLICE_X0Y52.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<12>
+    SLICE_X0Y53.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<16>
+    SLICE_X0Y54.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<20>
+    SLICE_X0Y55.COUT     Tbyp                  0.089   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.CIN      net (fanout=1)        0.000   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<24>
+    SLICE_X0Y56.AMUX     Tcina                 0.286   dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+                                                       dec[32]_PWR_1_o_mod_17/Madd_a[32]_GND_7_o_add_65_OUT_Madd_cy<28>
+    SLICE_X2Y57.B4       net (fanout=1)        0.418   dec[32]_PWR_1_o_mod_17/a[32]_GND_7_o_add_65_OUT<25>
+    SLICE_X2Y57.B        Tilo                  0.097   dec[32]_PWR_1_o_mod_17/a[8]_a[32]_MUX_3165_o
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_a[25]_a[32]_MUX_3148_o11
+    SLICE_X1Y51.C1       net (fanout=1)        0.959   dec[32]_PWR_1_o_mod_17/a[25]_a[32]_MUX_3148_o
+    SLICE_X1Y51.DMUX     Topcd                 0.628   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_lut<6>
+                                                       dec[32]_PWR_1_o_mod_17/Mcompar_BUS_0034_INV_2445_o_cy<7>
+    SLICE_X0Y58.A5       net (fanout=3)        0.455   dec[32]_PWR_1_o_mod_17/BUS_0034_INV_2445_o
+    SLICE_X0Y58.CLK      Tas                   0.067   dig5<3>
+                                                       dec[32]_PWR_1_o_mod_17/Mmux_o41
+                                                       dig5_3
+    -------------------------------------------------  ---------------------------
+    Total                                     41.149ns (14.820ns logic, 26.329ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point to7seg/dec_3 (SLICE_X28Y108.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.245ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               to7seg/count_13 (FF)
+  Destination:          to7seg/dec_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.508ns (Levels of Logic = 1)
+  Clock Path Skew:      0.263ns (0.834 - 0.571)
+  Source Clock:         CLK100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: to7seg/count_13 to to7seg/dec_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y94.BQ      Tcko                  0.141   to7seg/count<13>
+                                                       to7seg/count_13
+    SLICE_X28Y108.CX     net (fanout=12)       0.374   to7seg/count<13>
+    SLICE_X28Y108.CLK    Tckdi       (-Th)     0.007   to7seg/dec<3>
+                                                       to7seg/Mmux_count[13]_dec[3]_wide_mux_6_OUT43
+                                                       to7seg/dec_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.508ns (0.134ns logic, 0.374ns route)
+                                                       (26.4% logic, 73.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point to7seg/an_6 (SLICE_X29Y92.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.247ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               to7seg/count_11 (FF)
+  Destination:          to7seg/an_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.262ns (Levels of Logic = 1)
+  Clock Path Skew:      0.015ns (0.086 - 0.071)
+  Source Clock:         CLK100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: to7seg/count_11 to to7seg/an_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y93.DQ      Tcko                  0.141   to7seg/count<11>
+                                                       to7seg/count_11
+    SLICE_X29Y92.C5      net (fanout=18)       0.168   to7seg/count<11>
+    SLICE_X29Y92.CLK     Tah         (-Th)     0.047   to7seg/an<6>
+                                                       to7seg/Mmux_count[13]_an[7]_wide_mux_7_OUT71
+                                                       to7seg/an_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.262ns (0.094ns logic, 0.168ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point to7seg/dec_3 (SLICE_X28Y108.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.272ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               to7seg/count_11 (FF)
+  Destination:          to7seg/dec_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.535ns (Levels of Logic = 1)
+  Clock Path Skew:      0.263ns (0.834 - 0.571)
+  Source Clock:         CLK100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: to7seg/count_11 to to7seg/dec_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y93.DQ      Tcko                  0.141   to7seg/count<11>
+                                                       to7seg/count_11
+    SLICE_X28Y108.D6     net (fanout=18)       0.378   to7seg/count<11>
+    SLICE_X28Y108.CLK    Tah         (-Th)    -0.016   to7seg/dec<3>
+                                                       to7seg/Mmux_count[13]_dec[3]_wide_mux_6_OUT43_F
+                                                       to7seg/Mmux_count[13]_dec[3]_wide_mux_6_OUT43
+                                                       to7seg/dec_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.535ns (0.157ns logic, 0.378ns route)
+                                                       (29.3% logic, 70.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 4.000ns (250.000MHz) (Tadc_DCLK)
+  Physical resource: adc/XADC_INST/DCLK
+  Logical resource: adc/XADC_INST/DCLK
+  Location pin: XADC_X0Y0.DCLK
+  Clock network: CLK100MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: CLK100MHZ_BUFGP/BUFG/I0
+  Logical resource: CLK100MHZ_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: CLK100MHZ_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 8.410ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.590ns (628.931MHz) (Tdspper_PREG)
+  Physical resource: Mmult_n0045/CLK
+  Logical resource: Mmult_n0045/CLK
+  Location pin: DSP48_X1Y32.CLK
+  Clock network: CLK100MHZ_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK100MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK100MHZ      |   41.433|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 123  Score: 2585408  (Setup/Max: 2585408, Hold: 0)
+
+Constraints cover 2987527469089126900000000000000 paths, 0 nets, and 24471 connections
+
+Design statistics:
+   Minimum period:  41.433ns{1}   (Maximum frequency:  24.135MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon May 22 21:26:35 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 715 MB
+
+
+

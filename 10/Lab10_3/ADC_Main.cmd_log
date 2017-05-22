@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.xst" -ofn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Nexys4.ucf -p xc7a100t-csg324-3 ADC_Main.ngc ADC_Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADC_Main_map.ncd ADC_Main.ngd ADC_Main.pcf 
+par -w -intstyle ise -ol high -mt off ADC_Main_map.ncd ADC_Main.ncd ADC_Main.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADC_Main.twx ADC_Main.ncd -o ADC_Main.twr ADC_Main.pcf -ucf Nexys4.ucf 
+bitgen -intstyle ise -f ADC_Main.ut ADC_Main.ncd 
+xst -intstyle ise -ifn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.xst" -ofn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Nexys4.ucf -p xc7a100t-csg324-3 ADC_Main.ngc ADC_Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADC_Main_map.ncd ADC_Main.ngd ADC_Main.pcf 
+par -w -intstyle ise -ol high -mt off ADC_Main_map.ncd ADC_Main.ncd ADC_Main.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADC_Main.twx ADC_Main.ncd -o ADC_Main.twr ADC_Main.pcf -ucf Nexys4.ucf 
+bitgen -intstyle ise -f ADC_Main.ut ADC_Main.ncd 
+xst -intstyle ise -ifn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.xst" -ofn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.syr" 
+xst -intstyle ise -ifn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.xst" -ofn "C:/Users/ECL/Desktop/Lab10/Lab10_3/ADC_Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Nexys4.ucf -p xc7a100t-csg324-3 ADC_Main.ngc ADC_Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADC_Main_map.ncd ADC_Main.ngd ADC_Main.pcf 
+par -w -intstyle ise -ol high -mt off ADC_Main_map.ncd ADC_Main.ncd ADC_Main.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADC_Main.twx ADC_Main.ncd -o ADC_Main.twr ADC_Main.pcf -ucf Nexys4.ucf 
+bitgen -intstyle ise -f ADC_Main.ut ADC_Main.ncd 
