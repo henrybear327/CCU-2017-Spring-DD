@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/ECL/Desktop/Lab10/Lab10_3/FFT_Main.xst" -ofn "C:/Users/ECL/Desktop/Lab10/Lab10_3/FFT_Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Nexys4.ucf -p xc7a100t-csg324-3 FFT_Main.ngc FFT_Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FFT_Main_map.ncd FFT_Main.ngd FFT_Main.pcf 
+par -w -intstyle ise -ol high -mt off FFT_Main_map.ncd FFT_Main.ncd FFT_Main.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FFT_Main.twx FFT_Main.ncd -o FFT_Main.twr FFT_Main.pcf -ucf Nexys4.ucf 
+bitgen -intstyle ise -f FFT_Main.ut FFT_Main.ncd 

@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/adc.v"
+verilog work "ipcore_dir/adc/example_design/adc_exdes.v"
+verilog work "to7seg.v"
+verilog work "main.v"

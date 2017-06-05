@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ECL\Desktop\Lab10\Lab10_3\FFT_Main.ncd
+OUTFILE=C:\Users\ECL\Desktop\Lab10\Lab10_3\FFT_Main.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\ECL\Desktop\Lab10\Lab10_3
+LICENSE=WebPack
+USER_INFO=__0_0_0
