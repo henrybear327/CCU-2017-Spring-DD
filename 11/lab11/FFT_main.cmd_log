@@ -68,3 +68,4 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off FFT_main_map.ncd FFT_main.ncd FFT_main.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FFT_main.twx FFT_main.ncd -o FFT_main.twr FFT_main.pcf -ucf LEDs_ucf.ucf 
 bitgen -intstyle ise -f FFT_main.ut FFT_main.ncd 
+xst -intstyle ise -ifn "C:/Users/Henry Tseng/Documents/GitHub/CCU-2017-Spring-DD/11/lab11/FFT_main.xst" -ofn "C:/Users/Henry Tseng/Documents/GitHub/CCU-2017-Spring-DD/11/lab11/FFT_main.syr" 

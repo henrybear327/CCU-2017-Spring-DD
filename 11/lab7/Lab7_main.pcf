@@ -1,0 +1,56 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jun 09 02:53:06 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "sledctl<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "sledctl<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "sledctl<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sledctl<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "sledctl<3>" LOCATE = SITE "K13" LEVEL 1;
+COMP "sledctl<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "sledctl<1>" LOCATE = SITE "R10" LEVEL 1;
+COMP "spctl<7>" LOCATE = SITE "U13" LEVEL 1;
+COMP "spctl<5>" LOCATE = SITE "T14" LEVEL 1;
+COMP "spctl<6>" LOCATE = SITE "K2" LEVEL 1;
+COMP "spctl<0>" LOCATE = SITE "J17" LEVEL 1;
+COMP "spctl<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "spctl<4>" LOCATE = SITE "P14" LEVEL 1;
+COMP "spctl<1>" LOCATE = SITE "J18" LEVEL 1;
+COMP "spctl<2>" LOCATE = SITE "T9" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "ctl7seg1/number_31" BEL "ctl7seg1/number_30" BEL
+        "ctl7seg1/number_29" BEL "ctl7seg1/number_28" BEL "ctl7seg1/number_27"
+        BEL "ctl7seg1/number_26" BEL "ctl7seg1/number_25" BEL
+        "ctl7seg1/number_24" BEL "ctl7seg1/number_23" BEL "ctl7seg1/number_22"
+        BEL "ctl7seg1/number_21" BEL "ctl7seg1/number_20" BEL
+        "ctl7seg1/number_19" BEL "ctl7seg1/number_18" BEL "ctl7seg1/number_17"
+        BEL "ctl7seg1/number_16" BEL "ctl7seg1/number_15" BEL
+        "ctl7seg1/number_14" BEL "ctl7seg1/number_13" BEL "ctl7seg1/number_12"
+        BEL "ctl7seg1/number_11" BEL "ctl7seg1/number_10" BEL
+        "ctl7seg1/number_9" BEL "ctl7seg1/number_8" BEL "ctl7seg1/number_7"
+        BEL "ctl7seg1/number_6" BEL "ctl7seg1/number_5" BEL
+        "ctl7seg1/number_4" BEL "ctl7seg1/number_3" BEL "ctl7seg1/number_2"
+        BEL "ctl7seg1/number_1" BEL "ctl7seg1/number_0" BEL
+        "ctl7seg1/count_11" BEL "ctl7seg1/count_10" BEL "ctl7seg1/count_9" BEL
+        "ctl7seg1/count_8" BEL "ctl7seg1/count_7" BEL "ctl7seg1/count_6" BEL
+        "ctl7seg1/count_5" BEL "ctl7seg1/count_4" BEL "ctl7seg1/count_3" BEL
+        "ctl7seg1/count_2" BEL "ctl7seg1/count_1" BEL "ctl7seg1/count_0" BEL
+        "ctl7seg1/sledctl_6" BEL "ctl7seg1/sledctl_5" BEL "ctl7seg1/sledctl_4"
+        BEL "ctl7seg1/sledctl_3" BEL "ctl7seg1/sledctl_2" BEL
+        "ctl7seg1/sledctl_1" BEL "ctl7seg1/sledctl_0" BEL "ctl7seg1/tmpin_3"
+        BEL "ctl7seg1/tmpin_2" BEL "ctl7seg1/tmpin_1" BEL "ctl7seg1/tmpin_0"
+        BEL "ctl7seg1/spctl_7" BEL "ctl7seg1/spctl_6" BEL "ctl7seg1/spctl_5"
+        BEL "ctl7seg1/spctl_4" BEL "ctl7seg1/spctl_3" BEL "ctl7seg1/spctl_2"
+        BEL "ctl7seg1/spctl_1" BEL "ctl7seg1/spctl_0" BEL
+        "ctl7seg1/number_24_1" BEL "ctl7seg1/number_23_1" BEL
+        "ctl7seg1/number_25_1" BEL "ctl7seg1/number_30_1" BEL
+        "ctl7seg1/number_28_1" BEL "ctl7seg1/number_29_1" BEL
+        "ctl7seg1/number_26_1" BEL "ctl7seg1/number_27_1" BEL
+        "ctl7seg1/number_26_2" BEL "ctl7seg1/number_28_2" BEL
+        "ctl7seg1/number_23_2" BEL "ctl7seg1/number_23_3" BEL
+        "ctl7seg1/number_26_3" BEL "ctl7seg1/number_28_3" BEL
+        "ctl7seg1/number_31_1" BEL "ctl7seg1/number_30_2" BEL
+        "clk_BUFGP/BUFG";
+SCHEMATIC END;
+
