@@ -1,0 +1,19 @@
+## This file is a general .ucf for the Nexys4 DDR Rev C board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = sys_clk_pin;
+
+## Buttons
+NET "rst"           LOC=N17 | IOSTANDARD=LVCMOS33; #IO_L9P_T1_DQS_14
+
+## LEDs
+NET "led0"         LOC=H17 | IOSTANDARD=LVCMOS33; #IO_L18P_T2_A24_15
+NET "led1"         LOC=K15 | IOSTANDARD=LVCMOS33; #IO_L24P_T3_RS1_15
+NET "led2"         LOC=J13 | IOSTANDARD=LVCMOS33; #IO_L17N_T2_A25_15
+NET "led3"         LOC=N14 | IOSTANDARD=LVCMOS33; #IO_L8P_T1_D11_14
+NET "led4"         LOC=R18 | IOSTANDARD=LVCMOS33; #IO_L7P_T1_D09_14
+

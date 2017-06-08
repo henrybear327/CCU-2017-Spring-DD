@@ -1,0 +1,558 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: FFT_main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FFT_main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FFT_main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : FFT_main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Henry Tseng\Documents\Lab\lab2\ipcore_dir\fft.v" into library work
+Parsing module <fft>.
+Analyzing Verilog file "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" into library work
+Parsing module <FFT_main>.
+WARNING:HDLCompiler:751 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 38: Redeclaration of ansi port led0 is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FFT_main>.
+
+Elaborating module <fft>.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 213: Assignment to busy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 214: Assignment to edone ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 215: Assignment to done ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 228: Result of 22-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 228: Assignment to d0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 229: Assignment to led ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 296: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 311: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 312: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 310: Assignment to scan ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" Line 347: Assignment to seg_data ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FFT_main>.
+    Related source file is "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v".
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" line 202: Output port <xn_index> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" line 202: Output port <busy> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" line 202: Output port <edone> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\Lab\lab2\LEDs.v" line 202: Output port <done> of the instance <fft> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <out_index>.
+    Found 32-bit register for signal <re_temp>.
+    Found 32-bit register for signal <im_temp>.
+    Found 33-bit register for signal <sum>.
+    Found 1-bit register for signal <led0>.
+    Found 1-bit register for signal <led1>.
+    Found 1-bit register for signal <led2>.
+    Found 1-bit register for signal <led3>.
+    Found 1-bit register for signal <led4>.
+    Found 5-bit register for signal <data_cnt>.
+    Found 16-bit register for signal <fft_in>.
+    Found 33-bit register for signal <out_sum>.
+    Found 33-bit adder for signal <re_temp[31]_im_temp[31]_add_36_OUT> created at line 242.
+    Found 5-bit adder for signal <data_cnt[4]_GND_1_o_add_58_OUT> created at line 296.
+    Found 22x22-bit multiplier for signal <n0051> created at line 240.
+    Found 22x22-bit multiplier for signal <n0052> created at line 241.
+    Found 32x16-bit Read Only RAM for signal <data_cnt[4]_data_in[31][15]_wide_mux_59_OUT>
+    Found 33-bit comparator greater for signal <out_sum[32]_sum[32]_LessThan_38_o> created at line 246
+    Found 33-bit comparator greater for signal <sum[32]_out_sum[32]_LessThan_40_o> created at line 247
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 161 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <FFT_main> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x16-bit single-port Read Only RAM                   : 1
+# Multipliers                                          : 2
+ 22x22-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 2
+ 33-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 12
+ 1-bit register                                        : 5
+ 16-bit register                                       : 1
+ 32-bit register                                       : 2
+ 33-bit register                                       : 2
+ 5-bit register                                        : 2
+# Comparators                                          : 2
+ 33-bit comparator greater                             : 2
+# Multiplexers                                         : 1
+ 33-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fft.ngc>.
+Reading Secure Unit <blk0000018a>.
+Loading core <fft> for timing and area information for instance <fft>.
+INFO:Xst:1901 - Instance blk00000031 in unit blk00000031 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000032 in unit blk00000032 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000061 in unit blk00000061 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000062 in unit blk00000062 of type RAMB18SDP has been replaced by RAMB18E1
+WARNING:Xst:1710 - FF/Latch <im_temp_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_20> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_20> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <re_temp<31:20>> (without init value) have a constant value of 0 in block <FFT_main>.
+WARNING:Xst:2404 -  FFs/Latches <im_temp<31:20>> (without init value) have a constant value of 0 in block <FFT_main>.
+
+Synthesizing (advanced) Unit <FFT_main>.
+The following registers are absorbed into counter <data_cnt>: 1 register on signal <data_cnt>.
+INFO:Xst:3231 - The small RAM <Mram_data_cnt[4]_data_in[31][15]_wide_mux_59_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_cnt>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FFT_main> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x16-bit single-port distributed Read Only RAM       : 1
+# Multipliers                                          : 2
+ 22x22-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 1
+ 33-bit adder                                          : 1
+# Counters                                             : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 132
+ Flip-Flops                                            : 132
+# Comparators                                          : 2
+ 33-bit comparator greater                             : 2
+# Multiplexers                                         : 1
+ 33-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <fft_in_2> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <out_sum_32> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_32> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_cnt_2> of sequential type is unconnected in block <FFT_main>.
+WARNING:Xst:2677 - Node <data_cnt_3> of sequential type is unconnected in block <FFT_main>.
+WARNING:Xst:2677 - Node <data_cnt_4> of sequential type is unconnected in block <FFT_main>.
+INFO:Xst:2261 - The FF/Latch <fft_in_8> in Unit <FFT_main> is equivalent to the following 7 FFs/Latches, which will be removed : <fft_in_9> <fft_in_10> <fft_in_11> <fft_in_12> <fft_in_13> <fft_in_14> <fft_in_15> 
+INFO:Xst:2261 - The FF/Latch <fft_in_1> in Unit <FFT_main> is equivalent to the following FF/Latch, which will be removed : <data_cnt_0> 
+INFO:Xst:2261 - The FF/Latch <fft_in_4> in Unit <FFT_main> is equivalent to the following 2 FFs/Latches, which will be removed : <fft_in_6> <fft_in_7> 
+
+Optimizing unit <FFT_main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FFT_main, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FFT_main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1070
+#      GND                         : 23
+#      INV                         : 31
+#      LUT1                        : 19
+#      LUT2                        : 177
+#      LUT3                        : 172
+#      LUT4                        : 62
+#      LUT5                        : 20
+#      LUT6                        : 126
+#      MUXCY                       : 219
+#      MUXF7                       : 9
+#      VCC                         : 21
+#      XORCY                       : 191
+# FlipFlops/Latches                : 922
+#      FD                          : 12
+#      FD_1                        : 5
+#      FDE                         : 439
+#      FDR                         : 31
+#      FDRE                        : 435
+# RAMS                             : 5
+#      RAMB18E1                    : 5
+# Shift Registers                  : 219
+#      SRL16E                      : 116
+#      SRLC16E                     : 103
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+# DSPs                             : 7
+#      DSP48E1                     : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             917  out of  126800     0%  
+ Number of Slice LUTs:                  826  out of  63400     1%  
+    Number used as Logic:               607  out of  63400     0%  
+    Number used as Memory:              219  out of  19000     1%  
+       Number used as SRL:              219
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1201
+   Number with an unused Flip Flop:     284  out of   1201    23%  
+   Number with an unused LUT:           375  out of   1201    31%  
+   Number of fully used LUT-FF pairs:   542  out of   1201    45%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    210     3%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of    135     2%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      7  out of    240     2%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1146  |
+fft/blk000006a7/blk000006a8/q<0>   | NONE(led0)             | 5     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------+----------------------------------------------+-------+
+Control Signal                                                       | Buffer(FF name)                              | Load  |
+---------------------------------------------------------------------+----------------------------------------------+-------+
+fft/blk00000003/blk00000031/N0(fft/blk00000003/blk00000031/XST_GND:G)| NONE(fft/blk00000003/blk00000031/blk00000031)| 6     |
+fft/blk00000003/blk00000032/N0(fft/blk00000003/blk00000032/XST_GND:G)| NONE(fft/blk00000003/blk00000032/blk00000032)| 6     |
+fft/blk00000033/blk00000061/N0(fft/blk00000033/blk00000061/XST_GND:G)| NONE(fft/blk00000033/blk00000061/blk00000061)| 6     |
+fft/blk00000033/blk00000062/N0(fft/blk00000033/blk00000062/XST_GND:G)| NONE(fft/blk00000033/blk00000062/blk00000062)| 6     |
+fft/sig00000002(fft/blk00000002:G)                                   | NONE(fft/blk00000717)                        | 6     |
+fft/blk00000003/blk00000031/N1(fft/blk00000003/blk00000031/XST_VCC:P)| NONE(fft/blk00000003/blk00000031/blk00000031)| 4     |
+fft/blk00000003/blk00000032/N1(fft/blk00000003/blk00000032/XST_VCC:P)| NONE(fft/blk00000003/blk00000032/blk00000032)| 4     |
+fft/blk00000033/blk00000061/N1(fft/blk00000033/blk00000061/XST_VCC:P)| NONE(fft/blk00000033/blk00000061/blk00000061)| 4     |
+fft/blk00000033/blk00000062/N1(fft/blk00000033/blk00000062/XST_VCC:P)| NONE(fft/blk00000033/blk00000062/blk00000062)| 4     |
+fft/sig00000001(fft/blk00000001:P)                                   | NONE(fft/blk00000717)                        | 4     |
+---------------------------------------------------------------------+----------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.714ns (Maximum Frequency: 212.148MHz)
+   Minimum input arrival time before clock: 1.244ns
+   Maximum output required time after clock: 0.643ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.714ns (frequency: 212.148MHz)
+  Total number of paths / destination ports: 13842 / 1735
+-------------------------------------------------------------------------
+Delay:               4.714ns (Levels of Logic = 2)
+  Source:            fft/blk000003f0 (FF)
+  Destination:       Mmult_n00521 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fft/blk000003f0 to Mmult_n00521
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.361   0.358  blk000003f0 (xk_im<21>)
+     end scope: 'fft:xk_im<21>'
+     DSP48E1:A21->PCOUT47    1   2.970   0.000  Mmult_n0052 (Mmult_n0052_PCOUT_to_Mmult_n00521_PCIN_47)
+     DSP48E1:PCIN47            1.025          Mmult_n00521
+    ----------------------------------------
+    Total                      4.714ns (4.356ns logic, 0.358ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 73 / 73
+-------------------------------------------------------------------------
+Offset:              1.244ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       fft_in_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to fft_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   0.001   0.490  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            7   0.097   0.307  _n00841 (_n0084)
+     FDRE:R                    0.349          fft_in_0
+    ----------------------------------------
+    Total                      1.244ns (0.447ns logic, 0.797ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fft/blk000006a7/blk000006a8/q<0>'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.643ns (Levels of Logic = 1)
+  Source:            led0 (FF)
+  Destination:       led0 (PAD)
+  Source Clock:      fft/blk000006a7/blk000006a8/q<0> falling
+
+  Data Path: led0 to led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.364   0.279  led0 (led0_OBUF)
+     OBUF:I->O                 0.000          led0_OBUF (led0)
+    ----------------------------------------
+    Total                      0.643ns (0.364ns logic, 0.279ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.714|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fft/blk000006a7/blk000006a8/q<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    0.648|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.18 secs
+ 
+--> 
+
+Total memory usage is 366468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   66 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
