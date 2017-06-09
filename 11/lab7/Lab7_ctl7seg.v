@@ -13,14 +13,11 @@ module ctl7seg(
 	reg [11:0] count;
 	reg [3:0] tmpin;
 	
-	reg [31:0] number;
-	
 	always@(posedge clk)
 	begin
 		case (count)
 			12'b111111111111 : begin
 				count <= 12'b0;
-				number <= number + 1;
 			end
 			
 			default : 
@@ -32,7 +29,6 @@ module ctl7seg(
 	always@(posedge clk)
 	begin
 			case (count[11:9])
-			/*
 			3'b000 : tmpin = result % 10;
 			3'b001 : tmpin = result / 10 % 10;
 			3'b010 : tmpin = result / 100 % 10;
@@ -41,15 +37,6 @@ module ctl7seg(
 			3'b101 : tmpin = result / 100000 % 10;
 			3'b110 : tmpin = result / 1000000 % 10;
 			3'b111 : tmpin = result / 10000000 % 10;
-			*/
-			3'b000 : tmpin = number % 10;
-			3'b001 : tmpin = number / 10 % 10;
-			3'b010 : tmpin = number / 100 % 10;
-			3'b011 : tmpin = number / 1000 % 10;
-			3'b100 : tmpin = number / 10000 % 10;
-			3'b101 : tmpin = number / 100000 % 10;
-			3'b110 : tmpin = number / 1000000 % 10;
-			3'b111 : tmpin = number / 10000000 % 10;
 			
 			default : tmpin = 4'b1111;
 			endcase
