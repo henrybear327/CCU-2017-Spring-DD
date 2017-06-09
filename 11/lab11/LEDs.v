@@ -24,7 +24,10 @@ module FFT_main(
 	 output led1,
 	 output led2,
 	 output led3,
-	 output led4
+	 output led4,
+	 
+	 output [6:0] sledctl,
+	 output [7:0] spctl
 	 
     );
 	
@@ -34,6 +37,8 @@ reg [17:0] counter;
 reg [2:0] state;
 reg [6:0] seg_number,seg_data;
 reg [7:0] scan;
+
+reg [31:0] result;
 
 reg led0,led1,led2,led3,led4;
 reg sw5,sw4,sw3,sw2,sw1,sw0;
@@ -53,7 +58,7 @@ wire [4:0] xk_index,xn_index;
 
 
 // A 10010
-/*
+
 assign data_in[0] = 16'h00FB;  
 assign data_in[1] = 16'hFF03; 
 assign data_in[2] = 16'h00FB;  
@@ -86,7 +91,7 @@ assign data_in[28] = 16'h00FB;
 assign data_in[29] = 16'hFF03; 
 assign data_in[30] = 16'h00FB;  
 assign data_in[31] = 16'hFF03;  
-*/
+
 
 
 // B 01010
@@ -273,8 +278,10 @@ begin
 */
 
 	{led4,led3,led2,led1,led0} <= out_index;
+	result <= 100 * out_index[4:0] / 32;
 end
 
+ctl7seg ctl7seg1(.clk(clk), .result(result), .sledctl(sledctl), .spctl(spctl));
 
 //wtite down your code here
 always@(posedge clk)begin
@@ -359,4 +366,78 @@ always@(posedge clk) begin
 	default: seg_number <= seg_number;
   endcase
 end 
+endmodule
+
+module ctl7seg(
+	input clk,
+	input [31:0] result,
+	
+	output [7:0] spctl,
+	output [6:0] sledctl
+	);
+	
+	reg [7:0] spctl;
+	reg [6:0] sledctl;
+	reg [11:0] count;
+	reg [3:0] tmpin;
+	
+	always@(posedge clk)
+	begin
+		case (count)
+			12'b111111111111 : begin
+				count <= 12'b0;
+			end
+			
+			default : 
+			count <= count + 1;
+		endcase
+	end
+	
+	// set digit 
+	always@(posedge clk)
+	begin
+			case (count[11:9])
+			3'b000 : tmpin = result % 10;
+			3'b001 : tmpin = result / 10 % 10;
+			3'b010 : tmpin = result / 100 % 10;
+			3'b011 : tmpin = result / 1000 % 10;
+			3'b100 : tmpin = result / 10000 % 10;
+			3'b101 : tmpin = result / 100000 % 10;
+			3'b110 : tmpin = result / 1000000 % 10;
+			3'b111 : tmpin = result / 10000000 % 10;
+			
+			default : tmpin = 4'b1111;
+			endcase
+	end
+	
+	//configure the digit lighting for a 7-segment display
+	always@(posedge clk)
+		begin
+			case(tmpin)
+			0 : sledctl <= 7'b1000000;
+			1 : sledctl <= 7'b1111001;
+			2 : sledctl <= 7'b0100100;
+			3 : sledctl <= 7'b0110000;
+			4 : sledctl <= 7'b0011001;
+			5 : sledctl <= 7'b0010010;
+			6 : sledctl <= 7'b0000010;
+			7 : sledctl <= 7'b1111000;
+			8 : sledctl <= 7'b0000000;
+			9 : sledctl <= 7'b0010000;
+			default : sledctl <= 7'b1111111;
+		endcase
+		
+		// Place the digits one by one onto the 7-segment display
+		case(count[11:9])
+			3'b000 : spctl <= 8'b11111110;
+			3'b001 : spctl <= 8'b11111101;
+			3'b010 : spctl <= 8'b11111011;
+			3'b011 : spctl <= 8'b11110111;
+			3'b100 : spctl <= 8'b11101111;
+			3'b101 : spctl <= 8'b11011111;
+			3'b110 : spctl <= 8'b10111111;
+			3'b111 : spctl <= 8'b01111111;
+			default : spctl <= 8'b11111111;
+		endcase
+	end
 endmodule

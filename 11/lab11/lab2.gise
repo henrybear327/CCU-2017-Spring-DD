@@ -106,39 +106,42 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1496942533" xil_pn:in_ck="6736213860189389567" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-999396310441726978" xil_pn:start_ts="1496942526">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1496978090" xil_pn:in_ck="6736213860189389567" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-999396310441726978" xil_pn:start_ts="1496978038">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FFT_main.lso"/>
       <outfile xil_pn:name="FFT_main.ngc"/>
+      <outfile xil_pn:name="FFT_main.ngr"/>
       <outfile xil_pn:name="FFT_main.prj"/>
+      <outfile xil_pn:name="FFT_main.stx"/>
       <outfile xil_pn:name="FFT_main.syr"/>
       <outfile xil_pn:name="FFT_main.xst"/>
+      <outfile xil_pn:name="FFT_main_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1496939153" xil_pn:in_ck="3950200966807902513" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784892217868126310" xil_pn:start_ts="1496939153">
+    <transform xil_pn:end_ts="1496977889" xil_pn:in_ck="3950200966807902513" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784892217868126310" xil_pn:start_ts="1496977889">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1496939783" xil_pn:in_ck="4606333445387022416" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9193653537987615470" xil_pn:start_ts="1496939769">
+    <transform xil_pn:end_ts="1496978103" xil_pn:in_ck="4606333445387022416" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9193653537987615470" xil_pn:start_ts="1496978090">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FFT_main.bld"/>
       <outfile xil_pn:name="FFT_main.ngd"/>
       <outfile xil_pn:name="FFT_main_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1496939874" xil_pn:in_ck="8229399195508682140" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1496939783">
+    <transform xil_pn:end_ts="1496978176" xil_pn:in_ck="8229399195508682140" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1496978103">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FFT_main.pcf"/>
@@ -151,11 +154,9 @@
       <outfile xil_pn:name="FFT_main_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1496939935" xil_pn:in_ck="8815162842972137397" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1496939874">
+    <transform xil_pn:end_ts="1496978226" xil_pn:in_ck="8815162842972137397" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1496978176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FFT_main.ncd"/>
       <outfile xil_pn:name="FFT_main.pad"/>
       <outfile xil_pn:name="FFT_main.par"/>
@@ -167,11 +168,9 @@
       <outfile xil_pn:name="FFT_main_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1496939992" xil_pn:in_ck="3649194933362006887" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1496939935">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1496978272" xil_pn:in_ck="3649194933362006887" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1496978226">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="FFT_main.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="fft_main.bgn"/>
@@ -181,15 +180,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1496939993" xil_pn:in_ck="5317038036830577041" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="4674625285961985627" xil_pn:start_ts="1496939992">
+    <transform xil_pn:end_ts="1496978315" xil_pn:in_ck="5317038036830577041" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="4674625285961985627" xil_pn:start_ts="1496978315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1496939935" xil_pn:in_ck="-9017831967480264936" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1496939912">
+    <transform xil_pn:end_ts="1496978226" xil_pn:in_ck="-9017831967480264936" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1496978206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FFT_main.twr"/>
       <outfile xil_pn:name="FFT_main.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

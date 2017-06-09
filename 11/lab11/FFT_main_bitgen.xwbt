@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Henry Tseng\Documents\Lab\lab2\FFT_main.ncd
-OUTFILE=C:\Users\Henry Tseng\Documents\Lab\lab2\FFT_main.bit
+INFILE=C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\FFT_main.ncd
+OUTFILE=C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\FFT_main.bit
 FAMILY=Artix7
 PART=xc7a100t-3csg324
-WORKINGDIR=C:\Users\Henry Tseng\Documents\Lab\lab2
+WORKINGDIR=C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11
 LICENSE=WebPack
 USER_INFO=__0_0_0
