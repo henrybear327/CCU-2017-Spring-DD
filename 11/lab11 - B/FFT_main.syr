@@ -1,0 +1,1355 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: FFT_main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FFT_main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FFT_main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : FFT_main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\ipcore_dir\fft.v" into library work
+Parsing module <fft>.
+Analyzing Verilog file "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" into library work
+Parsing module <FFT_main>.
+WARNING:HDLCompiler:751 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 43: Redeclaration of ansi port led0 is not allowed
+Parsing module <ctl7seg>.
+WARNING:HDLCompiler:751 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 379: Redeclaration of ansi port spctl is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 380: Redeclaration of ansi port sledctl is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FFT_main>.
+
+Elaborating module <fft>.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 218: Assignment to busy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 219: Assignment to edone ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 220: Assignment to done ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 233: Result of 22-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 233: Assignment to d0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 234: Assignment to led ignored, since the identifier is never used
+
+Elaborating module <ctl7seg>.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 392: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 303: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 318: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 319: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 317: Assignment to scan ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" Line 354: Assignment to seg_data ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FFT_main>.
+    Related source file is "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v".
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" line 207: Output port <xn_index> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" line 207: Output port <busy> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" line 207: Output port <edone> of the instance <fft> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v" line 207: Output port <done> of the instance <fft> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <out_index>.
+    Found 32-bit register for signal <re_temp>.
+    Found 32-bit register for signal <im_temp>.
+    Found 33-bit register for signal <sum>.
+    Found 1-bit register for signal <led0>.
+    Found 1-bit register for signal <led1>.
+    Found 1-bit register for signal <led2>.
+    Found 1-bit register for signal <led3>.
+    Found 1-bit register for signal <led4>.
+    Found 5-bit register for signal <data_cnt>.
+    Found 16-bit register for signal <fft_in>.
+    Found 33-bit register for signal <out_sum>.
+    Found 7-bit register for signal <result>.
+    Found 33-bit adder for signal <re_temp[31]_im_temp[31]_add_36_OUT> created at line 247.
+    Found 5-bit adder for signal <data_cnt[4]_GND_1_o_add_60_OUT> created at line 303.
+    Found 22x22-bit multiplier for signal <n0056> created at line 245.
+    Found 22x22-bit multiplier for signal <n0057> created at line 246.
+    Found 7x5-bit multiplier for signal <n0068> created at line 281.
+    Found 32x16-bit Read Only RAM for signal <data_cnt[4]_data_in[31][15]_wide_mux_61_OUT>
+    Found 33-bit comparator greater for signal <out_sum[32]_sum[32]_LessThan_38_o> created at line 251
+    Found 33-bit comparator lessequal for signal <sum[32]_out_sum[32]_LessThan_40_o> created at line 252
+    WARNING:Xst:2404 -  FFs/Latches <result<31:7>> (without init value) have a constant value of 0 in block <FFT_main>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 168 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <FFT_main> synthesized.
+
+Synthesizing Unit <ctl7seg>.
+    Related source file is "C:\Users\Henry Tseng\Documents\GitHub\CCU-2017-Spring-DD\11\lab11\LEDs.v".
+    Found 4-bit register for signal <tmpin>.
+    Found 7-bit register for signal <sledctl>.
+    Found 8-bit register for signal <spctl>.
+    Found 12-bit register for signal <count>.
+    Found 12-bit adder for signal <count[11]_GND_5_o_add_1_OUT> created at line 392.
+    Found 16x7-bit Read Only RAM for signal <tmpin[3]_PWR_4_o_wide_mux_24_OUT>
+    Found 8x8-bit Read Only RAM for signal <count[11]_GND_5_o_wide_mux_25_OUT>
+    Found 4-bit 8-to-1 multiplexer for signal <count[11]_result[31]_wide_mux_21_OUT> created at line 399.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ctl7seg> synthesized.
+
+Synthesizing Unit <mod_32u_4u>.
+    Related source file is "".
+    Found 36-bit adder for signal <n2401> created at line 0.
+    Found 36-bit adder for signal <GND_6_o_b[3]_add_1_OUT> created at line 0.
+    Found 35-bit adder for signal <n2405> created at line 0.
+    Found 35-bit adder for signal <GND_6_o_b[3]_add_3_OUT> created at line 0.
+    Found 34-bit adder for signal <n2409> created at line 0.
+    Found 34-bit adder for signal <GND_6_o_b[3]_add_5_OUT> created at line 0.
+    Found 33-bit adder for signal <n2413> created at line 0.
+    Found 33-bit adder for signal <GND_6_o_b[3]_add_7_OUT> created at line 0.
+    Found 32-bit adder for signal <n2417> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[3]_add_9_OUT> created at line 0.
+    Found 32-bit adder for signal <n2421> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_11_OUT> created at line 0.
+    Found 32-bit adder for signal <n2425> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <n2429> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <n2433> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <n2437> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <n2441> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <n2445> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <n2449> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <n2453> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <n2457> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <n2461> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2465> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <n2469> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <n2473> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <n2477> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2481> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <n2485> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <n2489> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <n2493> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n2497> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n2501> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n2505> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n2509> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n2513> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n2517> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_59_OUT> created at line 0.
+    Found 32-bit adder for signal <n2521> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_61_OUT> created at line 0.
+    Found 32-bit adder for signal <n2525> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_63_OUT> created at line 0.
+    Found 32-bit adder for signal <n2529> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_65_OUT> created at line 0.
+    Found 36-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  66 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 1025 Multiplexer(s).
+Unit <mod_32u_4u> synthesized.
+
+Synthesizing Unit <div_32u_4u>.
+    Related source file is "".
+    Found 36-bit adder for signal <GND_7_o_b[3]_add_1_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_7_o_b[3]_add_3_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_7_o_b[3]_add_5_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_7_o_b[3]_add_7_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[3]_add_9_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_11_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_7_o_add_63_OUT[31:0]> created at line 0.
+    Found 36-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_4u> synthesized.
+
+Synthesizing Unit <div_32u_7u>.
+    Related source file is "".
+    Found 39-bit adder for signal <GND_8_o_b[6]_add_1_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_8_o_b[6]_add_3_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_8_o_b[6]_add_5_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_8_o_b[6]_add_7_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_8_o_b[6]_add_9_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_8_o_b[6]_add_11_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_8_o_b[6]_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[6]_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_8_o_add_63_OUT[31:0]> created at line 0.
+    Found 39-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_7u> synthesized.
+
+Synthesizing Unit <div_32u_10u>.
+    Related source file is "".
+    Found 42-bit adder for signal <GND_9_o_b[9]_add_1_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_9_o_b[9]_add_3_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_9_o_b[9]_add_5_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_9_o_b[9]_add_7_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_9_o_b[9]_add_9_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_9_o_b[9]_add_11_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_9_o_b[9]_add_13_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_9_o_b[9]_add_15_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_9_o_b[9]_add_17_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_9_o_b[9]_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[9]_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_9_o_add_63_OUT[31:0]> created at line 0.
+    Found 42-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_10u> synthesized.
+
+Synthesizing Unit <div_32u_14u>.
+    Related source file is "".
+    Found 46-bit adder for signal <GND_10_o_b[13]_add_1_OUT> created at line 0.
+    Found 45-bit adder for signal <GND_10_o_b[13]_add_3_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_10_o_b[13]_add_5_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_10_o_b[13]_add_7_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_10_o_b[13]_add_9_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_10_o_b[13]_add_11_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_10_o_b[13]_add_13_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_10_o_b[13]_add_15_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_10_o_b[13]_add_17_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_10_o_b[13]_add_19_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_10_o_b[13]_add_21_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_10_o_b[13]_add_23_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_10_o_b[13]_add_25_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_10_o_b[13]_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[13]_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_10_o_add_63_OUT[31:0]> created at line 0.
+    Found 46-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_14u> synthesized.
+
+Synthesizing Unit <div_32u_17u>.
+    Related source file is "".
+    Found 49-bit adder for signal <GND_11_o_b[16]_add_1_OUT> created at line 0.
+    Found 48-bit adder for signal <GND_11_o_b[16]_add_3_OUT> created at line 0.
+    Found 47-bit adder for signal <GND_11_o_b[16]_add_5_OUT> created at line 0.
+    Found 46-bit adder for signal <GND_11_o_b[16]_add_7_OUT> created at line 0.
+    Found 45-bit adder for signal <GND_11_o_b[16]_add_9_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_11_o_b[16]_add_11_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_11_o_b[16]_add_13_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_11_o_b[16]_add_15_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_11_o_b[16]_add_17_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_11_o_b[16]_add_19_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_11_o_b[16]_add_21_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_11_o_b[16]_add_23_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_11_o_b[16]_add_25_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_11_o_b[16]_add_27_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_11_o_b[16]_add_29_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_11_o_b[16]_add_31_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_11_o_b[16]_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[16]_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_63_OUT[31:0]> created at line 0.
+    Found 49-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_17u> synthesized.
+
+Synthesizing Unit <div_32u_20u>.
+    Related source file is "".
+    Found 52-bit adder for signal <GND_12_o_b[19]_add_1_OUT> created at line 0.
+    Found 51-bit adder for signal <GND_12_o_b[19]_add_3_OUT> created at line 0.
+    Found 50-bit adder for signal <GND_12_o_b[19]_add_5_OUT> created at line 0.
+    Found 49-bit adder for signal <GND_12_o_b[19]_add_7_OUT> created at line 0.
+    Found 48-bit adder for signal <GND_12_o_b[19]_add_9_OUT> created at line 0.
+    Found 47-bit adder for signal <GND_12_o_b[19]_add_11_OUT> created at line 0.
+    Found 46-bit adder for signal <GND_12_o_b[19]_add_13_OUT> created at line 0.
+    Found 45-bit adder for signal <GND_12_o_b[19]_add_15_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_12_o_b[19]_add_17_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_12_o_b[19]_add_19_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_12_o_b[19]_add_21_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_12_o_b[19]_add_23_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_12_o_b[19]_add_25_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_12_o_b[19]_add_27_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_12_o_b[19]_add_29_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_12_o_b[19]_add_31_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_12_o_b[19]_add_33_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_12_o_b[19]_add_35_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_12_o_b[19]_add_37_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_12_o_b[19]_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[19]_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_12_o_add_63_OUT[31:0]> created at line 0.
+    Found 52-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_20u> synthesized.
+
+Synthesizing Unit <div_32u_24u>.
+    Related source file is "".
+    Found 56-bit adder for signal <GND_13_o_b[23]_add_1_OUT> created at line 0.
+    Found 55-bit adder for signal <GND_13_o_b[23]_add_3_OUT> created at line 0.
+    Found 54-bit adder for signal <GND_13_o_b[23]_add_5_OUT> created at line 0.
+    Found 53-bit adder for signal <GND_13_o_b[23]_add_7_OUT> created at line 0.
+    Found 52-bit adder for signal <GND_13_o_b[23]_add_9_OUT> created at line 0.
+    Found 51-bit adder for signal <GND_13_o_b[23]_add_11_OUT> created at line 0.
+    Found 50-bit adder for signal <GND_13_o_b[23]_add_13_OUT> created at line 0.
+    Found 49-bit adder for signal <GND_13_o_b[23]_add_15_OUT> created at line 0.
+    Found 48-bit adder for signal <GND_13_o_b[23]_add_17_OUT> created at line 0.
+    Found 47-bit adder for signal <GND_13_o_b[23]_add_19_OUT> created at line 0.
+    Found 46-bit adder for signal <GND_13_o_b[23]_add_21_OUT> created at line 0.
+    Found 45-bit adder for signal <GND_13_o_b[23]_add_23_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_13_o_b[23]_add_25_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_13_o_b[23]_add_27_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_13_o_b[23]_add_29_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_13_o_b[23]_add_31_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_13_o_b[23]_add_33_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_13_o_b[23]_add_35_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_13_o_b[23]_add_37_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_13_o_b[23]_add_39_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_13_o_b[23]_add_41_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_13_o_b[23]_add_43_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_13_o_b[23]_add_45_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_13_o_b[23]_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[23]_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_13_o_add_63_OUT[31:0]> created at line 0.
+    Found 56-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 55-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 54-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 53-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 52-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_24u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port Read Only RAM                    : 1
+ 32x16-bit single-port Read Only RAM                   : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 3
+ 22x22-bit multiplier                                  : 2
+ 7x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 755
+ 12-bit adder                                          : 1
+ 32-bit adder                                          : 592
+ 33-bit adder                                          : 24
+ 34-bit adder                                          : 23
+ 35-bit adder                                          : 23
+ 36-bit adder                                          : 23
+ 37-bit adder                                          : 6
+ 38-bit adder                                          : 6
+ 39-bit adder                                          : 6
+ 40-bit adder                                          : 5
+ 41-bit adder                                          : 5
+ 42-bit adder                                          : 5
+ 43-bit adder                                          : 4
+ 44-bit adder                                          : 4
+ 45-bit adder                                          : 4
+ 46-bit adder                                          : 4
+ 47-bit adder                                          : 3
+ 48-bit adder                                          : 3
+ 49-bit adder                                          : 3
+ 5-bit adder                                           : 1
+ 50-bit adder                                          : 2
+ 51-bit adder                                          : 2
+ 52-bit adder                                          : 2
+ 53-bit adder                                          : 1
+ 54-bit adder                                          : 1
+ 55-bit adder                                          : 1
+ 56-bit adder                                          : 1
+# Registers                                            : 17
+ 1-bit register                                        : 5
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+ 32-bit register                                       : 2
+ 33-bit register                                       : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 497
+ 32-bit comparator lessequal                           : 367
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 16
+ 34-bit comparator lessequal                           : 15
+ 35-bit comparator lessequal                           : 15
+ 36-bit comparator lessequal                           : 15
+ 37-bit comparator lessequal                           : 6
+ 38-bit comparator lessequal                           : 6
+ 39-bit comparator lessequal                           : 6
+ 40-bit comparator lessequal                           : 5
+ 41-bit comparator lessequal                           : 5
+ 42-bit comparator lessequal                           : 5
+ 43-bit comparator lessequal                           : 4
+ 44-bit comparator lessequal                           : 4
+ 45-bit comparator lessequal                           : 4
+ 46-bit comparator lessequal                           : 4
+ 47-bit comparator lessequal                           : 3
+ 48-bit comparator lessequal                           : 3
+ 49-bit comparator lessequal                           : 3
+ 50-bit comparator lessequal                           : 2
+ 51-bit comparator lessequal                           : 2
+ 52-bit comparator lessequal                           : 2
+ 53-bit comparator lessequal                           : 1
+ 54-bit comparator lessequal                           : 1
+ 55-bit comparator lessequal                           : 1
+ 56-bit comparator lessequal                           : 1
+# Multiplexers                                         : 14720
+ 1-bit 2-to-1 multiplexer                              : 14688
+ 32-bit 2-to-1 multiplexer                             : 21
+ 33-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 8
+ 4-bit 8-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fft.ngc>.
+Reading Secure Unit <blk0000018a>.
+Loading core <fft> for timing and area information for instance <fft>.
+INFO:Xst:1901 - Instance blk00000031 in unit blk00000031 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000032 in unit blk00000032 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000061 in unit blk00000061 of type RAMB18SDP has been replaced by RAMB18E1
+INFO:Xst:1901 - Instance blk00000062 in unit blk00000062 of type RAMB18SDP has been replaced by RAMB18E1
+WARNING:Xst:1710 - FF/Latch <im_temp_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <im_temp_20> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <re_temp_20> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <re_temp<31:20>> (without init value) have a constant value of 0 in block <FFT_main>.
+WARNING:Xst:2404 -  FFs/Latches <im_temp<31:20>> (without init value) have a constant value of 0 in block <FFT_main>.
+
+Synthesizing (advanced) Unit <FFT_main>.
+The following registers are absorbed into counter <data_cnt>: 1 register on signal <data_cnt>.
+INFO:Xst:3231 - The small RAM <Mram_data_cnt[4]_data_in[31][15]_wide_mux_61_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_cnt>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FFT_main> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ctl7seg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3231 - The small RAM <Mram_tmpin[3]_PWR_4_o_wide_mux_24_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <tmpin>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_count[11]_GND_5_o_wide_mux_25_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count<11:9>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ctl7seg> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 32x16-bit single-port distributed Read Only RAM       : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 3
+ 22x22-bit multiplier                                  : 2
+ 7x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 489
+ 32-bit adder                                          : 224
+ 32-bit adder carry in                                 : 256
+ 33-bit adder                                          : 1
+ 4-bit adder carry in                                  : 8
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 158
+ Flip-Flops                                            : 158
+# Comparators                                          : 497
+ 32-bit comparator lessequal                           : 367
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 16
+ 34-bit comparator lessequal                           : 15
+ 35-bit comparator lessequal                           : 15
+ 36-bit comparator lessequal                           : 15
+ 37-bit comparator lessequal                           : 6
+ 38-bit comparator lessequal                           : 6
+ 39-bit comparator lessequal                           : 6
+ 40-bit comparator lessequal                           : 5
+ 41-bit comparator lessequal                           : 5
+ 42-bit comparator lessequal                           : 5
+ 43-bit comparator lessequal                           : 4
+ 44-bit comparator lessequal                           : 4
+ 45-bit comparator lessequal                           : 4
+ 46-bit comparator lessequal                           : 4
+ 47-bit comparator lessequal                           : 3
+ 48-bit comparator lessequal                           : 3
+ 49-bit comparator lessequal                           : 3
+ 50-bit comparator lessequal                           : 2
+ 51-bit comparator lessequal                           : 2
+ 52-bit comparator lessequal                           : 2
+ 53-bit comparator lessequal                           : 1
+ 54-bit comparator lessequal                           : 1
+ 55-bit comparator lessequal                           : 1
+ 56-bit comparator lessequal                           : 1
+# Multiplexers                                         : 14720
+ 1-bit 2-to-1 multiplexer                              : 14688
+ 32-bit 2-to-1 multiplexer                             : 21
+ 33-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 8
+ 4-bit 8-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <fft_in_2> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <out_sum_32> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_sum_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_32> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_31> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_30> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_29> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_28> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_27> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_26> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_25> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_24> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_23> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_22> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sum_21> (without init value) has a constant value of 0 in block <FFT_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_cnt_2> of sequential type is unconnected in block <FFT_main>.
+WARNING:Xst:2677 - Node <data_cnt_3> of sequential type is unconnected in block <FFT_main>.
+WARNING:Xst:2677 - Node <data_cnt_4> of sequential type is unconnected in block <FFT_main>.
+INFO:Xst:2261 - The FF/Latch <fft_in_8> in Unit <FFT_main> is equivalent to the following 7 FFs/Latches, which will be removed : <fft_in_9> <fft_in_10> <fft_in_11> <fft_in_12> <fft_in_13> <fft_in_14> <fft_in_15> 
+INFO:Xst:2261 - The FF/Latch <fft_in_1> in Unit <FFT_main> is equivalent to the following FF/Latch, which will be removed : <data_cnt_0> 
+INFO:Xst:2261 - The FF/Latch <fft_in_4> in Unit <FFT_main> is equivalent to the following 2 FFs/Latches, which will be removed : <fft_in_6> <fft_in_7> 
+WARNING:Xst:1989 - Unit <ctl7seg>: instances <result[31]_PWR_4_o_mod_12>, <result[31]_PWR_4_o_mod_14> of unit <mod_32u_4u> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ctl7seg>: instances <result[31]_PWR_4_o_mod_12>, <result[31]_PWR_4_o_mod_16> of unit <mod_32u_4u> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ctl7seg>: instances <result[31]_PWR_4_o_mod_12>, <result[31]_PWR_4_o_mod_18> of unit <mod_32u_4u> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ctl7seg>: instances <result[31]_PWR_4_o_mod_12>, <result[31]_PWR_4_o_mod_20> of unit <mod_32u_4u> are equivalent, second instance is removed
+
+Optimizing unit <FFT_main> ...
+
+Optimizing unit <ctl7seg> ...
+
+Optimizing unit <mod_32u_4u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FFT_main, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 107
+ Flip-Flops                                            : 107
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FFT_main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1950
+#      GND                         : 23
+#      INV                         : 40
+#      LUT1                        : 33
+#      LUT2                        : 286
+#      LUT3                        : 202
+#      LUT4                        : 178
+#      LUT5                        : 114
+#      LUT6                        : 195
+#      MUXCY                       : 464
+#      MUXF7                       : 14
+#      VCC                         : 21
+#      XORCY                       : 380
+# FlipFlops/Latches                : 960
+#      FD                          : 31
+#      FD_1                        : 12
+#      FDE                         : 439
+#      FDR                         : 43
+#      FDRE                        : 435
+# RAMS                             : 5
+#      RAMB18E1                    : 5
+# Shift Registers                  : 219
+#      SRL16E                      : 116
+#      SRLC16E                     : 103
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 1
+#      OBUF                        : 20
+# DSPs                             : 7
+#      DSP48E1                     : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             955  out of  126800     0%  
+ Number of Slice LUTs:                 1267  out of  63400     1%  
+    Number used as Logic:              1048  out of  63400     1%  
+    Number used as Memory:              219  out of  19000     1%  
+       Number used as SRL:              219
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1639
+   Number with an unused Flip Flop:     684  out of   1639    41%  
+   Number with an unused LUT:           372  out of   1639    22%  
+   Number of fully used LUT-FF pairs:   583  out of   1639    35%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    210    10%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of    135     2%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      7  out of    240     2%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1177  |
+fft/blk000006a7/blk000006a8/q<0>   | NONE(led2)             | 12    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------+----------------------------------------------+-------+
+Control Signal                                                       | Buffer(FF name)                              | Load  |
+---------------------------------------------------------------------+----------------------------------------------+-------+
+fft/blk00000003/blk00000031/N0(fft/blk00000003/blk00000031/XST_GND:G)| NONE(fft/blk00000003/blk00000031/blk00000031)| 6     |
+fft/blk00000003/blk00000032/N0(fft/blk00000003/blk00000032/XST_GND:G)| NONE(fft/blk00000003/blk00000032/blk00000032)| 6     |
+fft/blk00000033/blk00000061/N0(fft/blk00000033/blk00000061/XST_GND:G)| NONE(fft/blk00000033/blk00000061/blk00000061)| 6     |
+fft/blk00000033/blk00000062/N0(fft/blk00000033/blk00000062/XST_GND:G)| NONE(fft/blk00000033/blk00000062/blk00000062)| 6     |
+fft/sig00000002(fft/blk00000002:G)                                   | NONE(fft/blk00000717)                        | 6     |
+fft/blk00000003/blk00000031/N1(fft/blk00000003/blk00000031/XST_VCC:P)| NONE(fft/blk00000003/blk00000031/blk00000031)| 4     |
+fft/blk00000003/blk00000032/N1(fft/blk00000003/blk00000032/XST_VCC:P)| NONE(fft/blk00000003/blk00000032/blk00000032)| 4     |
+fft/blk00000033/blk00000061/N1(fft/blk00000033/blk00000061/XST_VCC:P)| NONE(fft/blk00000033/blk00000061/blk00000061)| 4     |
+fft/blk00000033/blk00000062/N1(fft/blk00000033/blk00000062/XST_VCC:P)| NONE(fft/blk00000033/blk00000062/blk00000062)| 4     |
+fft/sig00000001(fft/blk00000001:P)                                   | NONE(fft/blk00000717)                        | 4     |
+---------------------------------------------------------------------+----------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.714ns (Maximum Frequency: 212.148MHz)
+   Minimum input arrival time before clock: 1.245ns
+   Maximum output required time after clock: 0.643ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.714ns (frequency: 212.148MHz)
+  Total number of paths / destination ports: 14128 / 1773
+-------------------------------------------------------------------------
+Delay:               4.714ns (Levels of Logic = 2)
+  Source:            fft/blk0000041c (FF)
+  Destination:       Mmult_n00561 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fft/blk0000041c to Mmult_n00561
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.361   0.358  blk0000041c (xk_re<21>)
+     end scope: 'fft:xk_re<21>'
+     DSP48E1:A21->PCOUT47    1   2.970   0.000  Mmult_n0056 (Mmult_n0056_PCOUT_to_Mmult_n00561_PCIN_47)
+     DSP48E1:PCIN47            1.025          Mmult_n00561
+    ----------------------------------------
+    Total                      4.714ns (4.356ns logic, 0.358ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 73 / 73
+-------------------------------------------------------------------------
+Offset:              1.245ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       fft_in_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to fft_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            61   0.001   0.491  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            7   0.097   0.307  _n00921 (_n0092)
+     FDRE:R                    0.349          fft_in_0
+    ----------------------------------------
+    Total                      1.245ns (0.447ns logic, 0.798ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            ctl7seg1/sledctl_6 (FF)
+  Destination:       sledctl<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ctl7seg1/sledctl_6 to sledctl<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  ctl7seg1/sledctl_6 (ctl7seg1/sledctl_6)
+     OBUF:I->O                 0.000          sledctl_6_OBUF (sledctl<6>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fft/blk000006a7/blk000006a8/q<0>'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.643ns (Levels of Logic = 1)
+  Source:            led0 (FF)
+  Destination:       led0 (PAD)
+  Source Clock:      fft/blk000006a7/blk000006a8/q<0> falling
+
+  Data Path: led0 to led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.364   0.279  led0 (led0_OBUF)
+     OBUF:I->O                 0.000          led0_OBUF (led0)
+    ----------------------------------------
+    Total                      0.643ns (0.364ns logic, 0.279ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+clk                             |    4.714|         |         |         |
+fft/blk000006a7/blk000006a8/q<0>|         |   12.681|         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fft/blk000006a7/blk000006a8/q<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.985|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 50.62 secs
+ 
+--> 
+
+Total memory usage is 484404 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   74 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

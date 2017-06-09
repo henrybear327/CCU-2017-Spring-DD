@@ -1,0 +1,16 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Jun 09 23:02:49 2017
+
+drc -z FFT_main.ncd FFT_main.pcf
+
+INFO:PhysDesignRules:2385 - Issue with pin connections and/or configuration on
+   block:<fft/blk000000ef>:<DSP48E1_DSP48E1>.  When the DSP48E1 AREG attribute
+   is set to 1, the CEA1 input pin is preferred to be tied to GND to save power
+   when OPMODE0 and OPMODE1 are 1.
+INFO:PhysDesignRules:2385 - Issue with pin connections and/or configuration on
+   block:<fft/blk000000f1>:<DSP48E1_DSP48E1>.  When the DSP48E1 AREG attribute
+   is set to 1, the CEA1 input pin is preferred to be tied to GND to save power
+   when OPMODE0 and OPMODE1 are 1.
+DRC detected 0 errors and 0 warnings.

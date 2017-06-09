@@ -1,0 +1,484 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jun 09 23:01:36 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led1" LOCATE = SITE "K15" LEVEL 1;
+COMP "rst" LOCATE = SITE "N17" LEVEL 1;
+COMP "led3" LOCATE = SITE "N14" LEVEL 1;
+COMP "led0" LOCATE = SITE "H17" LEVEL 1;
+COMP "led2" LOCATE = SITE "J13" LEVEL 1;
+COMP "led4" LOCATE = SITE "R18" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "sledctl<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "sledctl<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "sledctl<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sledctl<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "sledctl<3>" LOCATE = SITE "K13" LEVEL 1;
+COMP "sledctl<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "sledctl<1>" LOCATE = SITE "R10" LEVEL 1;
+COMP "spctl<7>" LOCATE = SITE "U13" LEVEL 1;
+COMP "spctl<5>" LOCATE = SITE "T14" LEVEL 1;
+COMP "spctl<6>" LOCATE = SITE "K2" LEVEL 1;
+COMP "spctl<0>" LOCATE = SITE "J17" LEVEL 1;
+COMP "spctl<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "spctl<4>" LOCATE = SITE "P14" LEVEL 1;
+COMP "spctl<1>" LOCATE = SITE "J18" LEVEL 1;
+COMP "spctl<2>" LOCATE = SITE "T9" LEVEL 1;
+PIN Mmult_n00641_pins<147> = BEL "Mmult_n00641" PINNAME CLK;
+PIN Mmult_n00651_pins<147> = BEL "Mmult_n00651" PINNAME CLK;
+PIN fft/blk000000ef_pins<117> = BEL "fft/blk000000ef" PINNAME CLK;
+PIN fft/blk000000f0_pins<117> = BEL "fft/blk000000f0" PINNAME CLK;
+PIN fft/blk000000f1_pins<117> = BEL "fft/blk000000f1" PINNAME CLK;
+PIN fft/blk00000717_pins<32> = BEL "fft/blk00000717" PINNAME CLKARDCLK;
+PIN fft/blk00000717_pins<33> = BEL "fft/blk00000717" PINNAME CLKBWRCLK;
+PIN fft/blk00000003/blk00000031_pins<32> = BEL "fft/blk00000003/blk00000031"
+        PINNAME CLKARDCLK;
+PIN fft/blk00000003/blk00000031_pins<33> = BEL "fft/blk00000003/blk00000031"
+        PINNAME CLKBWRCLK;
+PIN fft/blk00000003/blk00000032_pins<32> = BEL "fft/blk00000003/blk00000032"
+        PINNAME CLKARDCLK;
+PIN fft/blk00000003/blk00000032_pins<33> = BEL "fft/blk00000003/blk00000032"
+        PINNAME CLKBWRCLK;
+PIN fft/blk00000033/blk00000061_pins<32> = BEL "fft/blk00000033/blk00000061"
+        PINNAME CLKARDCLK;
+PIN fft/blk00000033/blk00000061_pins<33> = BEL "fft/blk00000033/blk00000061"
+        PINNAME CLKBWRCLK;
+PIN fft/blk00000033/blk00000062_pins<32> = BEL "fft/blk00000033/blk00000062"
+        PINNAME CLKARDCLK;
+PIN fft/blk00000033/blk00000062_pins<33> = BEL "fft/blk00000033/blk00000062"
+        PINNAME CLKBWRCLK;
+TIMEGRP sys_clk_pin = BEL "fft_in_0" BEL "fft_in_1" BEL "fft_in_2" BEL
+        "fft_in_3" BEL "fft_in_4" BEL "fft_in_5" BEL "fft_in_6" BEL "fft_in_7"
+        BEL "fft_in_8" BEL "out_index_0" BEL "out_index_1" BEL "out_index_2"
+        BEL "out_index_3" BEL "out_index_4" BEL "re_temp_0" BEL "re_temp_1"
+        BEL "re_temp_2" BEL "re_temp_3" BEL "re_temp_4" BEL "im_temp_0" BEL
+        "im_temp_1" BEL "im_temp_2" BEL "im_temp_3" BEL "im_temp_4" BEL
+        "sum_0" BEL "sum_1" BEL "sum_2" BEL "sum_3" BEL "sum_4" BEL "sum_5"
+        BEL "sum_6" BEL "sum_7" BEL "sum_8" BEL "sum_9" BEL "sum_10" BEL
+        "sum_11" BEL "sum_12" BEL "sum_13" BEL "sum_14" BEL "sum_15" BEL
+        "sum_16" BEL "sum_17" BEL "sum_18" BEL "sum_19" BEL "sum_20" BEL
+        "out_sum_0" BEL "out_sum_1" BEL "out_sum_2" BEL "out_sum_3" BEL
+        "out_sum_4" BEL "out_sum_5" BEL "out_sum_6" BEL "out_sum_7" BEL
+        "out_sum_8" BEL "out_sum_9" BEL "out_sum_10" BEL "out_sum_11" BEL
+        "out_sum_12" BEL "out_sum_13" BEL "out_sum_14" BEL "out_sum_15" BEL
+        "out_sum_16" BEL "out_sum_17" BEL "out_sum_18" BEL "out_sum_19" BEL
+        "out_sum_20" PIN "Mmult_n00641_pins<147>" PIN "Mmult_n00651_pins<147>"
+        BEL "data_cnt_0" BEL "data_cnt_1" BEL "data_cnt_2" BEL
+        "ctl7seg1/count_11" BEL "ctl7seg1/count_10" BEL "ctl7seg1/count_9" BEL
+        "ctl7seg1/count_8" BEL "ctl7seg1/count_7" BEL "ctl7seg1/count_6" BEL
+        "ctl7seg1/count_5" BEL "ctl7seg1/count_4" BEL "ctl7seg1/count_3" BEL
+        "ctl7seg1/count_2" BEL "ctl7seg1/count_1" BEL "ctl7seg1/count_0" BEL
+        "ctl7seg1/sledctl_6" BEL "ctl7seg1/sledctl_5" BEL "ctl7seg1/sledctl_4"
+        BEL "ctl7seg1/sledctl_3" BEL "ctl7seg1/sledctl_2" BEL
+        "ctl7seg1/sledctl_1" BEL "ctl7seg1/sledctl_0" BEL "ctl7seg1/tmpin_3"
+        BEL "ctl7seg1/tmpin_2" BEL "ctl7seg1/tmpin_1" BEL "ctl7seg1/tmpin_0"
+        BEL "ctl7seg1/spctl_7" BEL "ctl7seg1/spctl_6" BEL "ctl7seg1/spctl_5"
+        BEL "ctl7seg1/spctl_4" BEL "ctl7seg1/spctl_3" BEL "ctl7seg1/spctl_2"
+        BEL "ctl7seg1/spctl_1" BEL "ctl7seg1/spctl_0" BEL "clk_BUFGP/BUFG" BEL
+        "fft/blk00000003/blk00000005" BEL "fft/blk00000003/blk00000006" BEL
+        "fft/blk00000003/blk00000007" BEL "fft/blk00000003/blk00000008" BEL
+        "fft/blk00000003/blk00000009" BEL "fft/blk00000003/blk0000000a" BEL
+        "fft/blk00000003/blk0000000b" BEL "fft/blk00000003/blk0000000c" BEL
+        "fft/blk00000003/blk0000000d" BEL "fft/blk00000003/blk0000000e" BEL
+        "fft/blk00000003/blk0000000f" BEL "fft/blk00000003/blk00000010" BEL
+        "fft/blk00000003/blk00000011" BEL "fft/blk00000003/blk00000012" BEL
+        "fft/blk00000003/blk00000013" BEL "fft/blk00000003/blk00000014" BEL
+        "fft/blk00000003/blk00000015" BEL "fft/blk00000003/blk00000016" BEL
+        "fft/blk00000003/blk00000017" BEL "fft/blk00000003/blk00000018" BEL
+        "fft/blk00000003/blk00000019" BEL "fft/blk00000003/blk0000001a" BEL
+        "fft/blk00000003/blk0000001b" BEL "fft/blk00000003/blk0000001c" BEL
+        "fft/blk00000003/blk0000001d" BEL "fft/blk00000003/blk0000001e" BEL
+        "fft/blk00000003/blk0000001f" BEL "fft/blk00000003/blk00000020" BEL
+        "fft/blk00000003/blk00000021" BEL "fft/blk00000003/blk00000022" BEL
+        "fft/blk00000003/blk00000023" BEL "fft/blk00000003/blk00000024" BEL
+        "fft/blk00000003/blk00000025" BEL "fft/blk00000003/blk00000026" BEL
+        "fft/blk00000003/blk00000027" BEL "fft/blk00000003/blk00000028" BEL
+        "fft/blk00000003/blk00000029" BEL "fft/blk00000003/blk0000002a" BEL
+        "fft/blk00000003/blk0000002b" BEL "fft/blk00000003/blk0000002c" BEL
+        "fft/blk00000003/blk0000002d" BEL "fft/blk00000003/blk0000002e" BEL
+        "fft/blk00000003/blk0000002f" BEL "fft/blk00000003/blk00000030" BEL
+        "fft/blk00000033/blk00000035" BEL "fft/blk00000033/blk00000036" BEL
+        "fft/blk00000033/blk00000037" BEL "fft/blk00000033/blk00000038" BEL
+        "fft/blk00000033/blk00000039" BEL "fft/blk00000033/blk0000003a" BEL
+        "fft/blk00000033/blk0000003b" BEL "fft/blk00000033/blk0000003c" BEL
+        "fft/blk00000033/blk0000003d" BEL "fft/blk00000033/blk0000003e" BEL
+        "fft/blk00000033/blk0000003f" BEL "fft/blk00000033/blk00000040" BEL
+        "fft/blk00000033/blk00000041" BEL "fft/blk00000033/blk00000042" BEL
+        "fft/blk00000033/blk00000043" BEL "fft/blk00000033/blk00000044" BEL
+        "fft/blk00000033/blk00000045" BEL "fft/blk00000033/blk00000046" BEL
+        "fft/blk00000033/blk00000047" BEL "fft/blk00000033/blk00000048" BEL
+        "fft/blk00000033/blk00000049" BEL "fft/blk00000033/blk0000004a" BEL
+        "fft/blk00000033/blk0000004b" BEL "fft/blk00000033/blk0000004c" BEL
+        "fft/blk00000033/blk0000004d" BEL "fft/blk00000033/blk0000004e" BEL
+        "fft/blk00000033/blk0000004f" BEL "fft/blk00000033/blk00000050" BEL
+        "fft/blk00000033/blk00000051" BEL "fft/blk00000033/blk00000052" BEL
+        "fft/blk00000033/blk00000053" BEL "fft/blk00000033/blk00000054" BEL
+        "fft/blk00000033/blk00000055" BEL "fft/blk00000033/blk00000056" BEL
+        "fft/blk00000033/blk00000057" BEL "fft/blk00000033/blk00000058" BEL
+        "fft/blk00000033/blk00000059" BEL "fft/blk00000033/blk0000005a" BEL
+        "fft/blk00000033/blk0000005b" BEL "fft/blk00000033/blk0000005c" BEL
+        "fft/blk00000033/blk0000005d" BEL "fft/blk00000033/blk0000005e" BEL
+        "fft/blk00000033/blk0000005f" BEL "fft/blk00000033/blk00000060" BEL
+        "fft/blk00000064" BEL "fft/blk00000065" BEL "fft/blk00000066" BEL
+        "fft/blk00000067" BEL "fft/blk00000068" BEL "fft/blk00000069" BEL
+        "fft/blk0000006a" BEL "fft/blk0000006b" BEL "fft/blk0000006c" BEL
+        "fft/blk0000006d" BEL "fft/blk0000006e" BEL "fft/blk0000006f" BEL
+        "fft/blk00000070" BEL "fft/blk00000071" BEL "fft/blk00000072" BEL
+        "fft/blk00000073" BEL "fft/blk00000074" BEL "fft/blk00000075" BEL
+        "fft/blk00000076" BEL "fft/blk00000077" BEL "fft/blk00000078" BEL
+        "fft/blk00000079" BEL "fft/blk0000007a" BEL "fft/blk0000007b" BEL
+        "fft/blk0000007c" BEL "fft/blk0000007e" BEL "fft/blk0000007f" BEL
+        "fft/blk00000080" BEL "fft/blk00000081" BEL "fft/blk00000082" BEL
+        "fft/blk00000083" BEL "fft/blk00000084" BEL "fft/blk00000085" BEL
+        "fft/blk00000086" BEL "fft/blk00000087" BEL "fft/blk00000088" BEL
+        "fft/blk00000089" BEL "fft/blk0000008a" BEL "fft/blk0000008b" BEL
+        "fft/blk0000008c" BEL "fft/blk0000008d" BEL "fft/blk0000008e" BEL
+        "fft/blk0000008f" BEL "fft/blk00000090" BEL "fft/blk00000091" BEL
+        "fft/blk00000092" BEL "fft/blk00000093" BEL "fft/blk00000094" BEL
+        "fft/blk00000095" BEL "fft/blk00000096" BEL "fft/blk00000097" BEL
+        "fft/blk00000098" BEL "fft/blk00000099" BEL "fft/blk0000009a" BEL
+        "fft/blk0000009b" BEL "fft/blk0000009c" BEL "fft/blk0000009d" BEL
+        "fft/blk0000009e" BEL "fft/blk0000009f" BEL "fft/blk000000a0" BEL
+        "fft/blk000000a1" BEL "fft/blk000000a2" BEL "fft/blk000000a3" BEL
+        "fft/blk000000a4" BEL "fft/blk000000a5" BEL "fft/blk000000a6" BEL
+        "fft/blk000000a7" BEL "fft/blk000000a8" BEL "fft/blk000000a9" BEL
+        "fft/blk000000aa" BEL "fft/blk000000ab" BEL "fft/blk000000ac" BEL
+        "fft/blk000000ad" BEL "fft/blk000000ae" BEL "fft/blk000000af" BEL
+        "fft/blk000000b0" BEL "fft/blk000000b1" BEL "fft/blk000000b2" BEL
+        "fft/blk000000b3" BEL "fft/blk000000b4" BEL "fft/blk000000b5" BEL
+        "fft/blk000000b6" BEL "fft/blk000000b7" BEL "fft/blk000000b8" BEL
+        "fft/blk000000b9" BEL "fft/blk000000ba" BEL "fft/blk000000bb" BEL
+        "fft/blk000000bc" BEL "fft/blk000000bd" BEL "fft/blk000000be" BEL
+        "fft/blk000000bf" BEL "fft/blk000000c0" BEL "fft/blk000000c1" BEL
+        "fft/blk000000c2" BEL "fft/blk000000c3" BEL "fft/blk000000c4" BEL
+        "fft/blk000000c5" BEL "fft/blk000000c6" BEL "fft/blk000000c7" BEL
+        "fft/blk000000c8" BEL "fft/blk000000c9" BEL "fft/blk000000ca" BEL
+        "fft/blk000000cb" BEL "fft/blk000000cc" BEL "fft/blk000000cd" BEL
+        "fft/blk000000ce" BEL "fft/blk000000cf" BEL "fft/blk000000d0" BEL
+        "fft/blk000000d1" BEL "fft/blk000000d2" BEL "fft/blk000000d3" BEL
+        "fft/blk000000d4" BEL "fft/blk000000d5" BEL "fft/blk000000d6" BEL
+        "fft/blk000000d7" BEL "fft/blk000000d8" BEL "fft/blk000000d9" BEL
+        "fft/blk000000da" BEL "fft/blk000000db" BEL "fft/blk000000dc" BEL
+        "fft/blk000000dd" BEL "fft/blk000000de" BEL "fft/blk000000df" BEL
+        "fft/blk000000e0" BEL "fft/blk000000e1" BEL "fft/blk000000e2" BEL
+        "fft/blk000000e3" BEL "fft/blk000000e4" BEL "fft/blk000000e5" BEL
+        "fft/blk000000e6" BEL "fft/blk000000e7" BEL "fft/blk000000e8" BEL
+        "fft/blk000000e9" BEL "fft/blk000000ea" BEL "fft/blk000000eb" BEL
+        "fft/blk000000ec" BEL "fft/blk000000ed" BEL "fft/blk000000ee" PIN
+        "fft/blk000000ef_pins<117>" PIN "fft/blk000000f0_pins<117>" PIN
+        "fft/blk000000f1_pins<117>" BEL "fft/blk00000127" BEL
+        "fft/blk00000128" BEL "fft/blk00000129" BEL "fft/blk0000012a" BEL
+        "fft/blk0000012b" BEL "fft/blk0000012c" BEL "fft/blk0000012d" BEL
+        "fft/blk0000012e" BEL "fft/blk0000012f" BEL "fft/blk00000130" BEL
+        "fft/blk00000131" BEL "fft/blk00000132" BEL "fft/blk00000133" BEL
+        "fft/blk00000134" BEL "fft/blk00000135" BEL "fft/blk00000136" BEL
+        "fft/blk00000137" BEL "fft/blk00000138" BEL "fft/blk0000015a" BEL
+        "fft/blk0000015b" BEL "fft/blk0000015c" BEL "fft/blk0000015d" BEL
+        "fft/blk0000015e" BEL "fft/blk0000015f" BEL "fft/blk00000160" BEL
+        "fft/blk00000161" BEL "fft/blk00000162" BEL "fft/blk00000163" BEL
+        "fft/blk00000164" BEL "fft/blk00000165" BEL "fft/blk00000166" BEL
+        "fft/blk00000167" BEL "fft/blk00000168" BEL "fft/blk00000169" BEL
+        "fft/blk0000016a" BEL "fft/blk0000016b" BEL "fft/blk0000016c" BEL
+        "fft/blk0000016d" BEL "fft/blk0000016e" BEL "fft/blk0000016f" BEL
+        "fft/blk00000170" BEL "fft/blk00000171" BEL "fft/blk00000172" BEL
+        "fft/blk00000173" BEL "fft/blk00000174" BEL "fft/blk00000175" BEL
+        "fft/blk00000176" BEL "fft/blk00000177" BEL "fft/blk00000178" BEL
+        "fft/blk00000179" BEL "fft/blk0000017a" BEL "fft/blk0000017b" BEL
+        "fft/blk0000017c" BEL "fft/blk0000017d" BEL "fft/blk0000017e" BEL
+        "fft/blk0000017f" BEL "fft/blk00000180" BEL
+        "fft/blk0000018a/blk000001c1" BEL "fft/blk0000018a/blk000001c2" BEL
+        "fft/blk0000018a/blk000001c3" BEL "fft/blk0000018a/blk000001c4" BEL
+        "fft/blk0000018a/blk000001c5" BEL "fft/blk0000018a/blk000001c6" BEL
+        "fft/blk0000018a/blk000001c7" BEL "fft/blk0000018a/blk000001c8" BEL
+        "fft/blk0000018a/blk000001c9" BEL "fft/blk0000018a/blk000001ca" BEL
+        "fft/blk0000018a/blk000001cb" BEL "fft/blk0000018a/blk000001cc" BEL
+        "fft/blk0000018a/blk000001cd" BEL "fft/blk0000018a/blk000001ce" BEL
+        "fft/blk0000018a/blk000001cf" BEL "fft/blk0000018a/blk000001d0" BEL
+        "fft/blk0000018a/blk000001d1" BEL "fft/blk0000018a/blk000001d2" BEL
+        "fft/blk0000018a/blk000001d3" BEL "fft/blk0000018a/blk000001d4" BEL
+        "fft/blk0000018a/blk000001d5" BEL "fft/blk0000018a/blk000001d6" BEL
+        "fft/blk000001f2/blk00000229" BEL "fft/blk000001f2/blk0000022a" BEL
+        "fft/blk000001f2/blk0000022b" BEL "fft/blk000001f2/blk0000022c" BEL
+        "fft/blk000001f2/blk0000022d" BEL "fft/blk000001f2/blk0000022e" BEL
+        "fft/blk000001f2/blk0000022f" BEL "fft/blk000001f2/blk00000230" BEL
+        "fft/blk000001f2/blk00000231" BEL "fft/blk000001f2/blk00000232" BEL
+        "fft/blk000001f2/blk00000233" BEL "fft/blk000001f2/blk00000234" BEL
+        "fft/blk000001f2/blk00000235" BEL "fft/blk000001f2/blk00000236" BEL
+        "fft/blk000001f2/blk00000237" BEL "fft/blk000001f2/blk00000238" BEL
+        "fft/blk000001f2/blk00000239" BEL "fft/blk000001f2/blk0000023a" BEL
+        "fft/blk000001f2/blk0000023b" BEL "fft/blk000001f2/blk0000023c" BEL
+        "fft/blk000001f2/blk0000023d" BEL "fft/blk000001f2/blk0000023e" BEL
+        "fft/blk0000025a/blk0000025c" BEL "fft/blk0000025a/blk0000025d" BEL
+        "fft/blk0000025a/blk0000025e" BEL "fft/blk0000025a/blk0000025f" BEL
+        "fft/blk0000025a/blk00000260" BEL "fft/blk0000025a/blk00000261" BEL
+        "fft/blk0000025a/blk00000262" BEL "fft/blk0000025a/blk00000263" BEL
+        "fft/blk0000025a/blk00000264" BEL "fft/blk0000025a/blk00000265" BEL
+        "fft/blk0000025a/blk00000266" BEL "fft/blk0000025a/blk00000267" BEL
+        "fft/blk0000025a/blk00000268" BEL "fft/blk0000025a/blk00000269" BEL
+        "fft/blk0000025a/blk0000026a" BEL "fft/blk0000025a/blk0000026b" BEL
+        "fft/blk0000025a/blk0000026c" BEL "fft/blk0000025a/blk0000026d" BEL
+        "fft/blk0000025a/blk0000026e" BEL "fft/blk0000025a/blk0000026f" BEL
+        "fft/blk0000025a/blk00000270" BEL "fft/blk0000025a/blk00000271" BEL
+        "fft/blk000002c2/blk000002c4" BEL "fft/blk000002c2/blk000002c5" BEL
+        "fft/blk000002c2/blk000002c6" BEL "fft/blk000002c2/blk000002c7" BEL
+        "fft/blk000002c2/blk000002c8" BEL "fft/blk000002c2/blk000002c9" BEL
+        "fft/blk000002c2/blk000002ca" BEL "fft/blk000002c2/blk000002cb" BEL
+        "fft/blk000002c2/blk000002cc" BEL "fft/blk000002c2/blk000002cd" BEL
+        "fft/blk000002c2/blk000002ce" BEL "fft/blk000002c2/blk000002cf" BEL
+        "fft/blk000002c2/blk000002d0" BEL "fft/blk000002c2/blk000002d1" BEL
+        "fft/blk000002c2/blk000002d2" BEL "fft/blk000002c2/blk000002d3" BEL
+        "fft/blk000002c2/blk000002d4" BEL "fft/blk000002c2/blk000002d5" BEL
+        "fft/blk000002c2/blk000002d6" BEL "fft/blk000002c2/blk000002d7" BEL
+        "fft/blk000002c2/blk000002d8" BEL "fft/blk000002c2/blk000002d9" BEL
+        "fft/blk00000340" BEL "fft/blk00000341" BEL "fft/blk00000342" BEL
+        "fft/blk00000343" BEL "fft/blk00000344" BEL "fft/blk00000345" BEL
+        "fft/blk00000346" BEL "fft/blk00000347" BEL "fft/blk00000348" BEL
+        "fft/blk00000349" BEL "fft/blk0000034a" BEL "fft/blk0000034b" BEL
+        "fft/blk0000034c" BEL "fft/blk0000034d" BEL "fft/blk0000034e" BEL
+        "fft/blk0000034f" BEL "fft/blk00000350" BEL "fft/blk00000351" BEL
+        "fft/blk00000352" BEL "fft/blk00000353" BEL "fft/blk00000354" BEL
+        "fft/blk00000355" BEL "fft/blk0000036c" BEL "fft/blk0000036d" BEL
+        "fft/blk0000036e" BEL "fft/blk0000036f" BEL "fft/blk00000370" BEL
+        "fft/blk00000371" BEL "fft/blk00000372" BEL "fft/blk00000373" BEL
+        "fft/blk00000374" BEL "fft/blk00000375" BEL "fft/blk00000376" BEL
+        "fft/blk00000377" BEL "fft/blk00000378" BEL "fft/blk00000379" BEL
+        "fft/blk0000037a" BEL "fft/blk0000037b" BEL "fft/blk0000037c" BEL
+        "fft/blk0000037d" BEL "fft/blk0000037e" BEL "fft/blk0000037f" BEL
+        "fft/blk00000380" BEL "fft/blk00000381" BEL "fft/blk00000398" BEL
+        "fft/blk00000399" BEL "fft/blk0000039a" BEL "fft/blk0000039b" BEL
+        "fft/blk0000039c" BEL "fft/blk0000039d" BEL "fft/blk0000039e" BEL
+        "fft/blk0000039f" BEL "fft/blk000003a0" BEL "fft/blk000003a1" BEL
+        "fft/blk000003a2" BEL "fft/blk000003a3" BEL "fft/blk000003a4" BEL
+        "fft/blk000003a5" BEL "fft/blk000003a6" BEL "fft/blk000003a7" BEL
+        "fft/blk000003a8" BEL "fft/blk000003a9" BEL "fft/blk000003aa" BEL
+        "fft/blk000003ab" BEL "fft/blk000003ac" BEL "fft/blk000003ad" BEL
+        "fft/blk000003c4" BEL "fft/blk000003c5" BEL "fft/blk000003c6" BEL
+        "fft/blk000003c7" BEL "fft/blk000003c8" BEL "fft/blk000003c9" BEL
+        "fft/blk000003ca" BEL "fft/blk000003cb" BEL "fft/blk000003cc" BEL
+        "fft/blk000003cd" BEL "fft/blk000003ce" BEL "fft/blk000003cf" BEL
+        "fft/blk000003d0" BEL "fft/blk000003d1" BEL "fft/blk000003d2" BEL
+        "fft/blk000003d3" BEL "fft/blk000003d4" BEL "fft/blk000003d5" BEL
+        "fft/blk000003d6" BEL "fft/blk000003d7" BEL "fft/blk000003d8" BEL
+        "fft/blk000003d9" BEL "fft/blk000003f0" BEL "fft/blk000003f1" BEL
+        "fft/blk000003f2" BEL "fft/blk000003f3" BEL "fft/blk000003f4" BEL
+        "fft/blk000003f5" BEL "fft/blk000003f6" BEL "fft/blk000003f7" BEL
+        "fft/blk000003f8" BEL "fft/blk000003f9" BEL "fft/blk000003fa" BEL
+        "fft/blk000003fb" BEL "fft/blk000003fc" BEL "fft/blk000003fd" BEL
+        "fft/blk000003fe" BEL "fft/blk000003ff" BEL "fft/blk00000400" BEL
+        "fft/blk00000401" BEL "fft/blk00000402" BEL "fft/blk00000403" BEL
+        "fft/blk00000404" BEL "fft/blk00000405" BEL "fft/blk0000041c" BEL
+        "fft/blk0000041d" BEL "fft/blk0000041e" BEL "fft/blk0000041f" BEL
+        "fft/blk00000420" BEL "fft/blk00000421" BEL "fft/blk00000422" BEL
+        "fft/blk00000423" BEL "fft/blk00000424" BEL "fft/blk00000425" BEL
+        "fft/blk00000426" BEL "fft/blk00000427" BEL "fft/blk00000428" BEL
+        "fft/blk00000429" BEL "fft/blk0000042a" BEL "fft/blk0000042b" BEL
+        "fft/blk0000042c" BEL "fft/blk0000042d" BEL "fft/blk0000042e" BEL
+        "fft/blk0000042f" BEL "fft/blk00000430" BEL "fft/blk00000431" BEL
+        "fft/blk00000432" BEL "fft/blk00000433" BEL "fft/blk00000434" BEL
+        "fft/blk00000435" BEL "fft/blk00000436" BEL "fft/blk00000437" BEL
+        "fft/blk00000438" BEL "fft/blk00000439" BEL "fft/blk0000043a" BEL
+        "fft/blk0000043b" BEL "fft/blk0000043c" BEL "fft/blk0000043d" BEL
+        "fft/blk0000043e" BEL "fft/blk0000043f" BEL "fft/blk00000440" BEL
+        "fft/blk00000441" BEL "fft/blk00000442" BEL "fft/blk00000443" BEL
+        "fft/blk00000444" BEL "fft/blk00000445" BEL "fft/blk00000446" BEL
+        "fft/blk00000447" BEL "fft/blk00000448" BEL "fft/blk00000449" BEL
+        "fft/blk0000044a" BEL "fft/blk0000044b" BEL "fft/blk0000044c" BEL
+        "fft/blk0000044d" BEL "fft/blk0000044e" BEL "fft/blk0000044f" BEL
+        "fft/blk00000450" BEL "fft/blk00000451" BEL "fft/blk00000452" BEL
+        "fft/blk00000453" BEL "fft/blk00000454" BEL "fft/blk00000455" BEL
+        "fft/blk00000456" BEL "fft/blk00000457" BEL "fft/blk00000458" BEL
+        "fft/blk00000459" BEL "fft/blk0000045a" BEL "fft/blk0000045b" BEL
+        "fft/blk0000045c" BEL "fft/blk0000045d" BEL "fft/blk0000045e" BEL
+        "fft/blk0000045f" BEL "fft/blk00000460" BEL "fft/blk00000461" BEL
+        "fft/blk00000462" BEL "fft/blk00000463" BEL "fft/blk00000464" BEL
+        "fft/blk00000465" BEL "fft/blk00000466" BEL "fft/blk00000467" BEL
+        "fft/blk00000468" BEL "fft/blk00000469" BEL "fft/blk0000046a" BEL
+        "fft/blk0000046b" BEL "fft/blk0000046c" BEL "fft/blk0000046d" BEL
+        "fft/blk0000046e" BEL "fft/blk0000046f" BEL "fft/blk00000470" BEL
+        "fft/blk00000471" BEL "fft/blk00000472" BEL "fft/blk00000473" BEL
+        "fft/blk00000474" BEL "fft/blk00000475" BEL "fft/blk00000476" BEL
+        "fft/blk00000477" BEL "fft/blk00000478" BEL "fft/blk00000479" BEL
+        "fft/blk0000047a" BEL "fft/blk0000047b" BEL "fft/blk0000047c" BEL
+        "fft/blk0000047d" BEL "fft/blk0000047e" BEL "fft/blk0000047f" BEL
+        "fft/blk00000480" BEL "fft/blk00000481" BEL "fft/blk00000482" BEL
+        "fft/blk00000483" BEL "fft/blk00000484" BEL "fft/blk00000485" BEL
+        "fft/blk00000486" BEL "fft/blk00000487" BEL "fft/blk00000488" BEL
+        "fft/blk00000489" BEL "fft/blk000004a0" BEL "fft/blk000004a1" BEL
+        "fft/blk000004a2" BEL "fft/blk000004a3" BEL "fft/blk000004a4" BEL
+        "fft/blk000004a5" BEL "fft/blk000004a6" BEL "fft/blk000004a7" BEL
+        "fft/blk000004a8" BEL "fft/blk000004a9" BEL "fft/blk000004aa" BEL
+        "fft/blk000004ab" BEL "fft/blk000004ac" BEL "fft/blk000004ad" BEL
+        "fft/blk000004ae" BEL "fft/blk000004af" BEL "fft/blk000004b0" BEL
+        "fft/blk000004b1" BEL "fft/blk000004b2" BEL "fft/blk000004b3" BEL
+        "fft/blk000004b4" BEL "fft/blk000004b5" BEL "fft/blk000004cc" BEL
+        "fft/blk000004cd" BEL "fft/blk000004ce" BEL "fft/blk000004cf" BEL
+        "fft/blk000004d0" BEL "fft/blk000004d1" BEL "fft/blk000004d2" BEL
+        "fft/blk000004d3" BEL "fft/blk000004d4" BEL "fft/blk000004d5" BEL
+        "fft/blk000004d6" BEL "fft/blk000004d7" BEL "fft/blk000004d8" BEL
+        "fft/blk000004d9" BEL "fft/blk000004da" BEL "fft/blk000004db" BEL
+        "fft/blk000004dc" BEL "fft/blk000004dd" BEL "fft/blk000004de" BEL
+        "fft/blk000004df" BEL "fft/blk000004e0" BEL "fft/blk000004e1" BEL
+        "fft/blk000004f8" BEL "fft/blk000004f9" BEL "fft/blk000004fa" BEL
+        "fft/blk000004fb" BEL "fft/blk000004fc" BEL "fft/blk000004fd" BEL
+        "fft/blk000004fe" BEL "fft/blk000004ff" BEL "fft/blk00000500" BEL
+        "fft/blk00000501" BEL "fft/blk00000502" BEL "fft/blk00000503" BEL
+        "fft/blk00000504" BEL "fft/blk00000505" BEL "fft/blk00000506" BEL
+        "fft/blk00000507" BEL "fft/blk00000508" BEL "fft/blk00000509" BEL
+        "fft/blk0000050a" BEL "fft/blk0000050b" BEL "fft/blk0000050c" BEL
+        "fft/blk0000050d" BEL "fft/blk00000524" BEL "fft/blk00000525" BEL
+        "fft/blk00000526" BEL "fft/blk00000527" BEL "fft/blk00000528" BEL
+        "fft/blk00000529" BEL "fft/blk0000052a" BEL "fft/blk0000052b" BEL
+        "fft/blk0000052c" BEL "fft/blk0000052d" BEL "fft/blk0000052e" BEL
+        "fft/blk0000052f" BEL "fft/blk00000530" BEL "fft/blk00000531" BEL
+        "fft/blk00000532" BEL "fft/blk00000533" BEL "fft/blk00000534" BEL
+        "fft/blk00000535" BEL "fft/blk00000536" BEL "fft/blk00000537" BEL
+        "fft/blk00000538" BEL "fft/blk00000539" BEL "fft/blk0000053a" BEL
+        "fft/blk0000053b" BEL "fft/blk0000053c" BEL "fft/blk0000053d" BEL
+        "fft/blk0000053e" BEL "fft/blk0000053f" BEL "fft/blk00000540" BEL
+        "fft/blk00000541" BEL "fft/blk00000542" BEL "fft/blk00000543" BEL
+        "fft/blk00000544" BEL "fft/blk00000545" BEL "fft/blk00000546" BEL
+        "fft/blk00000547" BEL "fft/blk00000548" BEL "fft/blk00000549" BEL
+        "fft/blk0000054a" BEL "fft/blk0000054b" BEL "fft/blk0000054c" BEL
+        "fft/blk0000054d" BEL "fft/blk0000054e" BEL "fft/blk0000054f" BEL
+        "fft/blk00000550" BEL "fft/blk00000551" BEL "fft/blk00000552" BEL
+        "fft/blk00000553" BEL "fft/blk00000554" BEL "fft/blk00000555" BEL
+        "fft/blk00000556" BEL "fft/blk00000557/blk00000558/blk0000055b" BEL
+        "fft/blk00000557/blk00000558/blk0000055c" BEL
+        "fft/blk0000055d/blk0000055e/blk00000561" BEL
+        "fft/blk0000055d/blk0000055e/blk00000562" BEL "fft/blk0000056f" BEL
+        "fft/blk00000570" BEL "fft/blk00000571" BEL "fft/blk00000572" BEL
+        "fft/blk00000573" BEL "fft/blk00000574" BEL "fft/blk00000575" BEL
+        "fft/blk00000576" BEL "fft/blk00000577" BEL "fft/blk00000578" BEL
+        "fft/blk00000579" BEL "fft/blk0000057a" BEL "fft/blk0000057b" BEL
+        "fft/blk0000057c" BEL "fft/blk00000585" BEL "fft/blk00000586" BEL
+        "fft/blk00000587" BEL "fft/blk00000588" BEL "fft/blk00000589" BEL
+        "fft/blk0000058a" BEL "fft/blk0000058b" BEL "fft/blk0000058c" BEL
+        "fft/blk0000058d" BEL "fft/blk0000058e" BEL "fft/blk0000058f" BEL
+        "fft/blk00000590" BEL "fft/blk00000591" BEL "fft/blk00000592" BEL
+        "fft/blk00000593" BEL "fft/blk00000594" BEL "fft/blk00000595" BEL
+        "fft/blk00000596" BEL "fft/blk00000597" BEL "fft/blk00000598" BEL
+        "fft/blk00000599" BEL "fft/blk0000059a" BEL "fft/blk0000059b" BEL
+        "fft/blk0000059c" BEL "fft/blk0000059d" BEL "fft/blk0000059e" BEL
+        "fft/blk0000059f" BEL "fft/blk000005a0" BEL "fft/blk000005a1" BEL
+        "fft/blk000005a2" BEL "fft/blk000005a3" BEL "fft/blk000005a4" BEL
+        "fft/blk000005a5" BEL "fft/blk000005a6" BEL "fft/blk000005a7" BEL
+        "fft/blk000005a8" BEL "fft/blk000005ad" BEL "fft/blk000005ae" BEL
+        "fft/blk000005af" BEL "fft/blk000005b0" BEL "fft/blk000005b5" BEL
+        "fft/blk000005b6" BEL "fft/blk000005b7" BEL "fft/blk000005b8" BEL
+        "fft/blk000005bd" BEL "fft/blk000005be" BEL "fft/blk000005bf" BEL
+        "fft/blk000005c0" BEL "fft/blk000005c5" BEL "fft/blk000005c6" BEL
+        "fft/blk000005c7" BEL "fft/blk000005c8" BEL
+        "fft/blk000005c9/blk000005ca/blk000005cd" BEL
+        "fft/blk000005c9/blk000005ca/blk000005ce" BEL
+        "fft/blk000005cf/blk000005d0/blk000005d3" BEL
+        "fft/blk000005cf/blk000005d0/blk000005d4" BEL
+        "fft/blk000005d5/blk000005d6/blk000005d9" BEL
+        "fft/blk000005d5/blk000005d6/blk000005da" BEL "fft/blk000005ea" BEL
+        "fft/blk000005eb" BEL "fft/blk000005ec" BEL "fft/blk000005ed" BEL
+        "fft/blk000005f0" BEL "fft/blk000005f1" BEL "fft/blk000005f2" BEL
+        "fft/blk000005f4" BEL "fft/blk000005f5" BEL "fft/blk000005f6" BEL
+        "fft/blk000005f7" BEL "fft/blk000005f8" BEL "fft/blk000005f9" BEL
+        "fft/blk000005fa" BEL "fft/blk000005fb" BEL "fft/blk000005fc" BEL
+        "fft/blk000005fd" BEL "fft/blk000005fe" BEL
+        "fft/blk000005ff/blk00000600/blk00000603" BEL
+        "fft/blk000005ff/blk00000600/blk00000604" BEL
+        "fft/blk00000605/blk00000606/blk00000609" BEL
+        "fft/blk00000605/blk00000606/blk0000060a" BEL "fft/blk0000060d" BEL
+        "fft/blk0000060e" BEL "fft/blk00000611" BEL "fft/blk00000612" BEL
+        "fft/blk00000613" BEL "fft/blk00000616" BEL "fft/blk00000617" BEL
+        "fft/blk00000618" BEL "fft/blk00000619" BEL "fft/blk0000061a" BEL
+        "fft/blk00000620" BEL "fft/blk00000621" BEL "fft/blk00000622" BEL
+        "fft/blk00000623" BEL "fft/blk00000624" BEL "fft/blk0000062a" BEL
+        "fft/blk0000062b" BEL "fft/blk0000062c" BEL "fft/blk0000062d" BEL
+        "fft/blk0000062e" BEL "fft/blk0000064e" BEL "fft/blk0000064f" BEL
+        "fft/blk00000650" BEL "fft/blk00000651" BEL "fft/blk00000652" BEL
+        "fft/blk00000653" BEL "fft/blk00000654" BEL "fft/blk0000065a" BEL
+        "fft/blk0000065b" BEL "fft/blk0000065c" BEL "fft/blk0000065d" BEL
+        "fft/blk0000065e" BEL "fft/blk0000065f" BEL "fft/blk00000660" BEL
+        "fft/blk00000666" BEL "fft/blk00000667" BEL "fft/blk00000668" BEL
+        "fft/blk00000669" BEL "fft/blk0000066a" BEL "fft/blk0000066b" BEL
+        "fft/blk0000066c" BEL "fft/blk0000069d" BEL "fft/blk0000069e" BEL
+        "fft/blk0000069f" BEL "fft/blk000006a0" BEL "fft/blk000006a1" BEL
+        "fft/blk000006a2" BEL "fft/blk000006a3" BEL "fft/blk000006a4" BEL
+        "fft/blk000006a5" BEL "fft/blk000006a6" BEL
+        "fft/blk000006a7/blk000006a8/blk000006a9" BEL
+        "fft/blk000006a7/blk000006a8/blk000006ac" BEL "fft/blk000006d3" BEL
+        "fft/blk000006d4" BEL "fft/blk000006d5" BEL "fft/blk000006d6" BEL
+        "fft/blk000006d7" BEL "fft/blk000006d8" BEL "fft/blk000006da" BEL
+        "fft/blk000006db" BEL "fft/blk000006dc" BEL "fft/blk000006dd" BEL
+        "fft/blk000006de" BEL "fft/blk00000718" BEL "fft/blk00000719" BEL
+        "fft/blk0000071a" BEL "fft/blk0000071b" BEL "fft/blk0000071c" BEL
+        "fft/blk0000071d" BEL "fft/blk0000071e" BEL "fft/blk0000071f" BEL
+        "fft/blk00000720" BEL "fft/blk00000721" BEL "fft/blk00000722" BEL
+        "fft/blk00000723" BEL "fft/blk00000724" BEL "fft/blk00000725" BEL
+        "fft/blk00000726" BEL "fft/blk00000727" BEL "fft/blk00000728" BEL
+        "fft/blk00000729" BEL "fft/blk0000072a" BEL "fft/blk0000072b" BEL
+        "fft/blk0000072c" BEL "fft/blk0000072d" BEL "fft/blk0000072e" BEL
+        "fft/blk0000072f" BEL "fft/blk00000730" BEL "fft/blk00000731" BEL
+        "fft/blk00000732" BEL "fft/blk00000733" BEL "fft/blk00000734" BEL
+        "fft/blk00000735" BEL "fft/blk00000736" BEL "fft/blk00000737" BEL
+        "fft/blk00000738" BEL "fft/blk00000739" BEL "fft/blk0000073a" BEL
+        "fft/blk0000073b" BEL "fft/blk0000073c" BEL "fft/blk0000073d" BEL
+        "fft/blk0000073e" BEL "fft/blk0000073f" BEL "fft/blk00000740" BEL
+        "fft/blk00000741" BEL "fft/blk00000742" BEL "fft/blk00000743" BEL
+        "fft/blk00000744" BEL "fft/blk00000745" BEL "fft/blk00000746" BEL
+        "fft/blk00000747" BEL "fft/blk00000748" BEL "fft/blk00000749" BEL
+        "fft/blk0000074a" BEL "fft/blk0000074b" BEL "fft/blk0000074c" BEL
+        "fft/blk0000074d" BEL "fft/blk0000074e" BEL "fft/blk0000074f" BEL
+        "fft/blk00000750" BEL "fft/blk00000751" BEL "fft/blk00000752" BEL
+        "fft/blk00000753" BEL "fft/blk00000754" BEL "fft/blk00000755" BEL
+        "fft/blk00000756" BEL "fft/blk00000757" BEL "fft/blk00000758" BEL
+        "fft/blk00000759" BEL "fft/blk0000075a" BEL "fft/blk0000075b" BEL
+        "fft/blk0000075c" BEL "fft/blk0000075d" BEL "fft/blk0000075e" BEL
+        "fft/blk0000075f" BEL "fft/blk00000760" BEL "fft/blk00000761" BEL
+        "fft/blk00000762" BEL "fft/blk00000763" BEL "fft/blk00000764" BEL
+        "fft/blk00000765" BEL "fft/blk00000766" BEL "fft/blk00000767" BEL
+        "fft/blk00000768" BEL "fft/blk00000769" BEL "fft/blk0000076a" BEL
+        "fft/blk0000076b" BEL "fft/blk0000076c" BEL "fft/blk0000076d" BEL
+        "fft/blk0000076e" BEL "fft/blk0000076f" BEL "fft/blk00000770" BEL
+        "fft/blk00000771" BEL "fft/blk00000772" BEL "fft/blk00000773" BEL
+        "fft/blk00000774" BEL "fft/blk00000775" BEL "fft/blk00000776" BEL
+        "fft/blk00000777" BEL "fft/blk00000778" BEL "fft/blk00000779" BEL
+        "fft/blk0000077a" BEL "fft/blk0000077b" BEL "fft/blk0000077c" BEL
+        "fft/blk0000077d" BEL "fft/blk0000077e" BEL "fft/blk0000077f" BEL
+        "fft/blk00000780" BEL "fft/blk00000781" BEL "fft/blk00000782" BEL
+        "fft/blk00000783" BEL "fft/blk00000784" BEL "fft/blk00000785" BEL
+        "fft/blk00000786" BEL "fft/blk00000787" BEL "fft/blk00000788" BEL
+        "fft/blk00000789" BEL "fft/blk0000078a" BEL "fft/blk0000078b" BEL
+        "fft/blk0000078c" BEL "fft/blk0000078d" BEL "fft/blk0000078e" BEL
+        "fft/blk0000078f" BEL "fft/blk00000790" BEL "fft/blk00000791" BEL
+        "fft/blk00000792" BEL "fft/blk00000793" BEL "fft/blk00000794" BEL
+        "fft/blk00000795" BEL "fft/blk00000796" BEL "fft/blk00000797" BEL
+        "fft/blk00000798" BEL "fft/blk00000799" BEL "fft/blk0000079a" BEL
+        "fft/blk0000079b" BEL "fft/blk0000079c" BEL "fft/blk0000079d" BEL
+        "fft/blk0000079e" BEL "fft/blk0000079f" BEL "fft/blk000007a0" BEL
+        "fft/blk000007a1" BEL "fft/blk000007a2" BEL "fft/blk000007a3" BEL
+        "fft/blk000007a4" BEL "fft/blk000007a5" BEL "fft/blk000007a6" BEL
+        "fft/blk000007a7" BEL "fft/blk000007a8" BEL "fft/blk000007a9" BEL
+        "fft/blk000007aa" BEL "fft/blk000007ab" BEL "fft/blk000007ac" BEL
+        "fft/blk000007ad" BEL "fft/blk000007ae" BEL "fft/blk000007af" BEL
+        "fft/blk000007b0" BEL "fft/blk000007b1" BEL "fft/blk000007b2" BEL
+        "fft/blk000007b3" BEL "fft/blk000007b4" BEL "fft/blk000007b5" BEL
+        "fft/blk000007b6" BEL "fft/blk000007b7" BEL "fft/blk000007b8" BEL
+        "fft/blk000007b9" BEL "fft/blk000007ba" BEL "fft/blk000007bb" BEL
+        "fft/blk000007bc" BEL "fft/blk000007bd" BEL "fft/blk000007be" BEL
+        "fft/blk000007bf" BEL "fft/blk000007c0" BEL "fft/blk000007c1" BEL
+        "fft/blk000007c2" BEL "fft/blk000007c3" BEL "fft/blk000007c4" BEL
+        "fft/blk000007c5" BEL "fft/blk000007c6" BEL "fft/blk000007c7" BEL
+        "fft/blk000007c8" BEL "fft/blk000007c9" BEL "fft/blk000007ca" BEL
+        "fft/blk000007cb" BEL "fft/blk000007cc" BEL "fft/blk000007cd" BEL
+        "fft/blk000007ce" BEL "fft/blk000007cf" BEL "fft/blk000007d0" BEL
+        "fft/blk000007d1" BEL "fft/blk000007d2" BEL "fft/blk000007d3" BEL
+        "fft/blk000007d4" BEL "fft/blk000007d5" PIN "fft/blk00000717_pins<32>"
+        PIN "fft/blk00000717_pins<33>" PIN
+        "fft/blk00000003/blk00000031_pins<32>" PIN
+        "fft/blk00000003/blk00000031_pins<33>" PIN
+        "fft/blk00000003/blk00000032_pins<32>" PIN
+        "fft/blk00000003/blk00000032_pins<33>" PIN
+        "fft/blk00000033/blk00000061_pins<32>" PIN
+        "fft/blk00000033/blk00000061_pins<33>" PIN
+        "fft/blk00000033/blk00000062_pins<32>" PIN
+        "fft/blk00000033/blk00000062_pins<33>";
+SCHEMATIC END;
+

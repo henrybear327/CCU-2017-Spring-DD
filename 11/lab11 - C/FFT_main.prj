@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/fft.v"
+verilog work "LEDs.v"

@@ -1,0 +1,448 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'FFT_main'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o FFT_main_map.ncd FFT_main.ngd FFT_main.pcf 
+Target Device  : xc7a100t
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Fri Jun 09 22:47:34 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Slice Logic Utilization:
+  Number of Slice Registers:                   945 out of 126,800    1%
+    Number used as Flip Flops:                 945
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,009 out of  63,400    1%
+    Number used as logic:                      865 out of  63,400    1%
+      Number using O6 output only:             462
+      Number using O5 output only:              17
+      Number using O5 and O6:                  386
+      Number used as ROM:                        0
+    Number used as Memory:                     116 out of  19,000    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           116
+        Number using O6 output only:            15
+        Number using O5 output only:             0
+        Number using O5 and O6:                101
+    Number used exclusively as route-thrus:     28
+      Number with same-slice register load:     25
+      Number with same-slice carry load:         3
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   388 out of  15,850    2%
+  Number of LUT Flip Flop pairs used:        1,165
+    Number with an unused Flip Flop:           453 out of   1,165   38%
+    Number with an unused LUT:                 156 out of   1,165   13%
+    Number of fully used LUT-FF pairs:         556 out of   1,165   47%
+    Number of unique control sets:              13
+    Number of slice register sites lost
+      to control set restrictions:              30 out of 126,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        22 out of     210   10%
+    Number of LOCed IOBs:                       22 out of      22  100%
+    IOB Flip Flops:                              5
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
+  Number of RAMB18E1/FIFO18E1s:                  5 out of     270    1%
+    Number using RAMB18E1 only:                  5
+    Number using FIFO18E1 only:                  0
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        5 out of     300    1%
+    Number used as OLOGICE2s:                    5
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      96    0%
+  Number of BUFRs:                               0 out of      24    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            7 out of     240    2%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       6    0%
+  Number of IN_FIFOs:                            0 out of      24    0%
+  Number of MMCME2_ADVs:                         0 out of       6    0%
+  Number of OUT_FIFOs:                           0 out of      24    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       6    0%
+  Number of PHY_CONTROLs:                        0 out of       6    0%
+  Number of PLLE2_ADVs:                          0 out of       6    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.34
+
+Peak Memory Usage:  936 MB
+Total REAL time to MAP completion:  1 mins 9 secs 
+Total CPU time to MAP completion:   1 mins 9 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:2238 - Function generator symbol "fft/blk000005f0" (Output Signal =
+   fft/sig00000676) has an invalid use of the LUTNM constraint. There are no
+   other function generator symbols with a matching LUTNM constraint value
+   (LUTNM=fft/hlutnm0000007d). The constraint will be ignored.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   fft/U0/i_synth/non_floating_point.arch_c.xfft_inst/control/cntrl/done_pr_d_1
+   has no load.
+INFO:LIT:395 - The above info message is repeated 37 more times for the
+   following (max. 5 shown):
+   fft/sig0000029e,
+   fft/sig0000029f,
+   fft/sig000002a0,
+   fft/sig000002a1,
+   fft/sig000002a2
+   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:2385 - Issue with pin connections and/or configuration on
+   block:<fft/blk000000ef>:<DSP48E1_DSP48E1>.  When the DSP48E1 AREG attribute
+   is set to 1, the CEA1 input pin is preferred to be tied to GND to save power
+   when OPMODE0 and OPMODE1 are 1.
+INFO:PhysDesignRules:2385 - Issue with pin connections and/or configuration on
+   block:<fft/blk000000f1>:<DSP48E1_DSP48E1>.  When the DSP48E1 AREG attribute
+   is set to 1, the CEA1 input pin is preferred to be tied to GND to save power
+   when OPMODE0 and OPMODE1 are 1.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  49 block(s) removed
+  46 block(s) optimized away
+  70 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "fft/blk0000018a/blk0000018c" (XOR) removed.
+Loadless block "fft/blk0000018a/blk0000018d" (XOR) removed.
+ The signal "fft/blk0000018a/sig000009fe" is loadless and has been removed.
+  Loadless block "fft/blk0000018a/blk000001a7" (MUX) removed.
+   The signal "fft/blk0000018a/sig000009ff" is loadless and has been removed.
+    Loadless block "fft/blk0000018a/blk000001a8" (MUX) removed.
+   The signal "fft/blk0000018a/sig00000a18" is loadless and has been removed.
+    Loadless block "fft/blk0000018a/blk000001ee" (ROM) removed.
+     The signal "fft/sig000001d4" is loadless and has been removed.
+      Loadless block "fft/blk0000007d" (FF) removed.
+       The signal "fft/sig00000222" is loadless and has been removed.
+ The signal "fft/blk0000018a/sig000009e7" is loadless and has been removed.
+  Loadless block "fft/blk0000018a/blk000001ed" (ROM) removed.
+Loadless block "fft/blk0000018a/blk0000018e" (XOR) removed.
+Loadless block "fft/blk0000018a/blk000001a5" (XOR) removed.
+Loadless block "fft/blk0000018a/blk000001a6" (XOR) removed.
+Loadless block "fft/blk000001f2/blk000001f4" (XOR) removed.
+Loadless block "fft/blk000001f2/blk000001f5" (XOR) removed.
+ The signal "fft/blk000001f2/sig00000a96" is loadless and has been removed.
+  Loadless block "fft/blk000001f2/blk0000020f" (MUX) removed.
+   The signal "fft/blk000001f2/sig00000a97" is loadless and has been removed.
+    Loadless block "fft/blk000001f2/blk00000210" (MUX) removed.
+   The signal "fft/blk000001f2/sig00000ab0" is loadless and has been removed.
+    Loadless block "fft/blk000001f2/blk00000256" (ROM) removed.
+     The signal "fft/sig000001ee" is loadless and has been removed.
+      Loadless block "fft/blk00000063" (FF) removed.
+       The signal "fft/sig00000208" is loadless and has been removed.
+ The signal "fft/blk000001f2/sig00000a7f" is loadless and has been removed.
+  Loadless block "fft/blk000001f2/blk00000255" (ROM) removed.
+Loadless block "fft/blk000001f2/blk000001f6" (XOR) removed.
+Loadless block "fft/blk000001f2/blk0000020d" (XOR) removed.
+Loadless block "fft/blk000001f2/blk0000020e" (XOR) removed.
+Loadless block "fft/blk0000025a/blk00000272" (XOR) removed.
+Loadless block "fft/blk0000025a/blk00000273" (XOR) removed.
+ The signal "fft/blk0000025a/sig00000b31" is loadless and has been removed.
+  Loadless block "fft/blk0000025a/blk0000028d" (MUX) removed.
+   The signal "fft/blk0000025a/sig00000b32" is loadless and has been removed.
+    Loadless block "fft/blk0000025a/blk0000028e" (MUX) removed.
+   The signal "fft/blk0000025a/sig00000b4b" is loadless and has been removed.
+    Loadless block "fft/blk0000025a/blk000002be" (ROM) removed.
+ The signal "fft/blk0000025a/sig00000b17" is loadless and has been removed.
+  Loadless block "fft/blk0000025a/blk000002bd" (ROM) removed.
+Loadless block "fft/blk0000025a/blk00000274" (XOR) removed.
+Loadless block "fft/blk0000025a/blk0000028b" (XOR) removed.
+Loadless block "fft/blk0000025a/blk0000028c" (XOR) removed.
+Loadless block "fft/blk000002c2/blk000002da" (XOR) removed.
+Loadless block "fft/blk000002c2/blk000002db" (XOR) removed.
+ The signal "fft/blk000002c2/sig00000bc9" is loadless and has been removed.
+  Loadless block "fft/blk000002c2/blk000002f5" (MUX) removed.
+   The signal "fft/blk000002c2/sig00000bca" is loadless and has been removed.
+    Loadless block "fft/blk000002c2/blk000002f6" (MUX) removed.
+   The signal "fft/blk000002c2/sig00000be3" is loadless and has been removed.
+    Loadless block "fft/blk000002c2/blk00000326" (ROM) removed.
+ The signal "fft/blk000002c2/sig00000baf" is loadless and has been removed.
+  Loadless block "fft/blk000002c2/blk00000325" (ROM) removed.
+Loadless block "fft/blk000002c2/blk000002dc" (XOR) removed.
+Loadless block "fft/blk000002c2/blk000002f3" (XOR) removed.
+Loadless block "fft/blk000002c2/blk000002f4" (XOR) removed.
+Loadless block "fft/blk000005ee" (SFF) removed.
+ The signal "fft/sig0000066a" is loadless and has been removed.
+  Loadless block "fft/blk000005df" (MUX) removed.
+   The signal "fft/sig00000674" is loadless and has been removed.
+    Loadless block "fft/blk000005e9" (ROM) removed.
+   The signal "fft/sig0000066f" is loadless and has been removed.
+    Loadless block "fft/blk000005e4" (ROM) removed.
+Loadless block "fft/blk000005f3" (SFF) removed.
+ The signal "fft/sig00000675" is loadless and has been removed.
+Loadless block "fft/blk0000060c" (SFF) removed.
+ The signal "fft/sig0000067d" is loadless and has been removed.
+The signal
+"fft/U0/i_synth/non_floating_point.arch_c.xfft_inst/control/cntrl/done_pr_d_1"
+is sourceless and has been removed.
+The signal "fft/sig0000029e" is sourceless and has been removed.
+The signal "fft/sig0000029f" is sourceless and has been removed.
+The signal "fft/sig000002a0" is sourceless and has been removed.
+The signal "fft/sig000002a1" is sourceless and has been removed.
+The signal "fft/sig000002a2" is sourceless and has been removed.
+The signal "fft/sig000002bd" is sourceless and has been removed.
+The signal "fft/sig000002be" is sourceless and has been removed.
+The signal "fft/sig000002bf" is sourceless and has been removed.
+The signal "fft/sig000002c0" is sourceless and has been removed.
+The signal "fft/sig000002c1" is sourceless and has been removed.
+The signal "fft/sig000002c2" is sourceless and has been removed.
+The signal "fft/sig000002c3" is sourceless and has been removed.
+The signal "fft/sig000002c4" is sourceless and has been removed.
+The signal "fft/sig000002c5" is sourceless and has been removed.
+The signal "fft/sig000002c6" is sourceless and has been removed.
+The signal "fft/sig000002c7" is sourceless and has been removed.
+The signal "fft/sig000002c8" is sourceless and has been removed.
+The signal "fft/sig000002f4" is sourceless and has been removed.
+The signal "fft/sig000002f5" is sourceless and has been removed.
+The signal "fft/sig000002f6" is sourceless and has been removed.
+The signal "fft/sig0000034a" is sourceless and has been removed.
+The signal "fft/sig0000034b" is sourceless and has been removed.
+The signal "fft/sig0000034c" is sourceless and has been removed.
+The signal "fft/sig0000034d" is sourceless and has been removed.
+The signal "fft/sig0000034e" is sourceless and has been removed.
+The signal "fft/sig00000369" is sourceless and has been removed.
+The signal "fft/sig0000036a" is sourceless and has been removed.
+The signal "fft/sig0000036b" is sourceless and has been removed.
+The signal "fft/sig0000036c" is sourceless and has been removed.
+The signal "fft/sig0000036d" is sourceless and has been removed.
+The signal "fft/sig0000036e" is sourceless and has been removed.
+The signal "fft/sig0000036f" is sourceless and has been removed.
+The signal "fft/sig00000370" is sourceless and has been removed.
+The signal "fft/sig00000371" is sourceless and has been removed.
+The signal "fft/sig00000372" is sourceless and has been removed.
+The signal "fft/sig00000373" is sourceless and has been removed.
+The signal "fft/sig00000374" is sourceless and has been removed.
+The signal "fft/sig0000062c" is sourceless and has been removed.
+The signal "fft/sig0000062d" is sourceless and has been removed.
+The signal "fft/sig0000062e" is sourceless and has been removed.
+The signal "fft/sig0000062f" is sourceless and has been removed.
+The signal "fft/sig0000067f" is sourceless and has been removed.
+ Sourceless block "fft/blk00000615" (FF) removed.
+  The signal "fft/sig0000068d" is sourceless and has been removed.
+The signal "fft/sig000006f4" is sourceless and has been removed.
+Unused block "fft/blk000005ef" (SRL16E) removed.
+Unused block "fft/blk0000060b" (SRL16E) removed.
+Unused block "fft/blk00000614" (SFF) removed.
+Unused block "fft/blk00000700" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+VCC 		fft/blk00000001
+GND 		fft/blk00000002
+GND 		fft/blk00000003/blk00000004
+GND 		fft/blk00000033/blk00000034
+GND 		fft/blk0000018a/blk0000018b
+GND 		fft/blk000001f2/blk000001f3
+VCC 		fft/blk0000025a/blk0000025b
+VCC 		fft/blk000002c2/blk000002c3
+GND 		fft/blk00000557/blk00000558/blk00000559
+VCC 		fft/blk00000557/blk00000558/blk0000055a
+GND 		fft/blk0000055d/blk0000055e/blk0000055f
+VCC 		fft/blk0000055d/blk0000055e/blk00000560
+LUT6 		fft/blk0000056b
+   optimized to 0
+LUT6 		fft/blk0000056c
+   optimized to 0
+LUT6 		fft/blk0000056d
+   optimized to 0
+LUT6 		fft/blk0000056e
+   optimized to 0
+GND 		fft/blk000005c9/blk000005ca/blk000005cb
+VCC 		fft/blk000005c9/blk000005ca/blk000005cc
+GND 		fft/blk000005cf/blk000005d0/blk000005d1
+VCC 		fft/blk000005cf/blk000005d0/blk000005d2
+GND 		fft/blk000005d5/blk000005d6/blk000005d7
+VCC 		fft/blk000005d5/blk000005d6/blk000005d8
+LUT6 		fft/blk000005e5
+   optimized to 0
+GND 		fft/blk000005ff/blk00000600/blk00000601
+VCC 		fft/blk000005ff/blk00000600/blk00000602
+GND 		fft/blk00000605/blk00000606/blk00000607
+VCC 		fft/blk00000605/blk00000606/blk00000608
+FDE 		fft/blk0000060f
+   optimized to 0
+FDE 		fft/blk00000610
+   optimized to 0
+VCC 		fft/blk0000062f/blk00000630
+GND 		fft/blk0000062f/blk00000631
+VCC 		fft/blk0000063c/blk0000063d
+GND 		fft/blk0000063c/blk0000063e
+VCC 		fft/blk0000066d/blk0000066e
+GND 		fft/blk0000066d/blk0000066f
+VCC 		fft/blk0000067d/blk0000067e
+GND 		fft/blk0000067d/blk0000067f
+VCC 		fft/blk0000068d/blk0000068e
+GND 		fft/blk0000068d/blk0000068f
+GND 		fft/blk000006a7/blk000006a8/blk000006aa
+VCC 		fft/blk000006a7/blk000006a8/blk000006ab
+FD 		fft/blk000006d9
+   optimized to 1
+LUT4 		fft/blk000006f9
+   optimized to 1
+LUT6 		fft/blk00000701
+   optimized to 0
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| led0                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led1                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led2                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led3                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led4                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| rst                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sledctl<0>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<1>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<2>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<3>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<4>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<5>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sledctl<6>                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<0>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<1>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<2>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<3>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<4>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<5>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<6>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| spctl<7>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
