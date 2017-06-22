@@ -1,0 +1,10 @@
+Release 14.7 par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+KUANG-YUJENA0F5::  Fri Jun 23 00:12:36 2017
+
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+
+
+Constraints file: top.pcf.
+Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.

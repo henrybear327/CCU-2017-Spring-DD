@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">CLK_OUT2</arg> with clock driver <arg fmt="%s" index="2">instance_name/clkout2_buf</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">CLK_OUT4</arg> with clock driver <arg fmt="%s" index="2">instance_name/clkout4_buf</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">CLK_OUT5</arg> with clock driver <arg fmt="%s" index="2">instance_name/clkout5_buf</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">CLK_OUT6</arg> with clock driver <arg fmt="%s" index="2">instance_name/clkout6_buf</arg> drives no clock pins
+</msg>
+
+</messages>
+

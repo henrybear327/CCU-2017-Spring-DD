@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Y:\final3\top.ncd
+OUTFILE=Y:\final3\top.bit
+FAMILY=Artix7
+PART=xc7a100t-2csg324
+WORKINGDIR=Y:\final3
+LICENSE=WebPack
+USER_INFO=__0_0_0
